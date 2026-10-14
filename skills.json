@@ -1,0 +1,213 @@
+{
+  "categories": [
+    {
+      "name": "PROGRAMMING LANGUAGES",
+      "skills": [
+        {
+          "label": "C",
+          "description": "Programming fundamentals, low-level concepts, and problem solving"
+        },
+        {
+          "label": "C++",
+          "description": "Programming, algorithms, object-oriented development, and CLI tooling"
+        },
+        {
+          "label": "Python",
+          "description": "Scripting, automation, utilities, and application development"
+        },
+        {
+          "label": "JavaScript",
+          "description": "Interactive web applications and frontend development"
+        },
+        {
+          "label": "TypeScript",
+          "description": "Typed JavaScript for structured application development"
+        },
+        {
+          "label": "Bash",
+          "description": "Linux shell scripting, automation, and command-line workflows"
+        },
+        {
+          "label": "HTML",
+          "description": "Semantic markup and document structure for the web"
+        },
+        {
+          "label": "CSS",
+          "description": "Responsive styling, layout systems, and modern interface design"
+        }
+      ]
+    },
+    {
+      "name": "WEB DEVELOPMENT",
+      "skills": [
+        {
+          "label": "HTML",
+          "description": "Semantic structure and accessible document markup"
+        },
+        {
+          "label": "CSS",
+          "description": "Modern responsive layouts, Flexbox, Grid, and Tailwind CSS design tokens"
+        },
+        {
+          "label": "React",
+          "description": "Component architecture, reactive state management, and UI rendering"
+        },
+        {
+          "label": "Next.js",
+          "description": "App router architecture, server/client components, and production builds"
+        },
+        {
+          "label": "Vite",
+          "description": "Fast frontend build tooling and development environment"
+        },
+        {
+          "label": "Node.js",
+          "description": "Runtime environment for build tooling and developer utilities"
+        },
+        {
+          "label": "API Integration",
+          "description": "Consuming REST APIs, managing asynchronous state, and data serialization"
+        }
+      ]
+    },
+    {
+      "name": "SYSTEMS & DEVELOPER TOOLING",
+      "skills": [
+        {
+          "label": "Linux",
+          "description": "Command-line environments, system administration fundamentals, and shell workflows"
+        },
+        {
+          "label": "Git",
+          "description": "Version control, commit hygiene, and branching workflows"
+        },
+        {
+          "label": "GitHub",
+          "description": "Repository management, collaboration, and open-source workflows"
+        },
+        {
+          "label": "Docker",
+          "description": "Containerized environments for isolated development and testing"
+        },
+        {
+          "label": "Podman",
+          "description": "Rootless container workflows and Linux development environments"
+        },
+        {
+          "label": "CLI Tooling",
+          "description": "Building and using terminal-based utilities and developer tools"
+        },
+        {
+          "label": "SQLite",
+          "description": "Embedded relational database storage for local applications"
+        },
+        {
+          "label": "JSON & Configuration",
+          "description": "Structured data interchange, system configuration, and schema modeling"
+        },
+        {
+          "label": "Networking Fundamentals",
+          "description": "Understanding protocols, sockets, and network debugging"
+        },
+        {
+          "label": "System Troubleshooting",
+          "description": "Diagnosing configuration issues, process inspection, and environment debugging"
+        }
+      ]
+    },
+    {
+      "name": "AI & AGENTIC DEVELOPMENT",
+      "skills": [
+        {
+          "label": "AI Coding Agents",
+          "description": "Using coding agents to explore repositories, implement features, debug software, and automate development workflows"
+        },
+        {
+          "label": "Agentic Workflow Design",
+          "description": "Designing multi-step AI workflows that coordinate tools, context, and execution"
+        },
+        {
+          "label": "Workflow Automation",
+          "description": "Automating repetitive development and technical tasks with scripts, AI agents, and tool integrations"
+        },
+        {
+          "label": "Local LLM Experimentation",
+          "description": "Running and evaluating local open-weight language models for specialized tasks"
+        },
+        {
+          "label": "Prompt & Context Engineering",
+          "description": "Structuring instructions, constraints, and repository context for agent execution"
+        },
+        {
+          "label": "Tool Integration",
+          "description": "Connecting external tools, APIs, and command runners to agentic pipelines"
+        },
+        {
+          "label": "OpenCode",
+          "description": "Agent-assisted development and interactive coding sessions"
+        },
+        {
+          "label": "Claude Code",
+          "description": "Command-line agentic workflows for software engineering and codebase navigation"
+        },
+        {
+          "label": "Codex",
+          "description": "AI-assisted code generation and execution environments"
+        },
+        {
+          "label": "Ollama",
+          "description": "Local model runtime and integration for offline inference"
+        },
+        {
+          "label": "LM Studio",
+          "description": "Local model testing, quantization experimentation, and inference"
+        },
+        {
+          "label": "Open WebUI",
+          "description": "Self-hosted interface for local and API-driven language model interactions"
+        },
+        {
+          "label": "OpenRouter",
+          "description": "Unified API gateway for routing and experimenting across model architectures"
+        }
+      ]
+    },
+    {
+      "name": "CYBERSECURITY & NETWORKING",
+      "skills": [
+        {
+          "label": "Linux Security",
+          "description": "System hardening fundamentals, permission models, and unprivileged execution"
+        },
+        {
+          "label": "Network Security Fundamentals",
+          "description": "Packet inspection, traffic analysis, and secure communication protocols"
+        },
+        {
+          "label": "Cryptographic Fundamentals",
+          "description": "Implementing and verifying primitives like X25519 and AES-256-GCM"
+        },
+        {
+          "label": "Firewalls",
+          "description": "Packet filtering rules and local network boundary defense"
+        },
+        {
+          "label": "Networking",
+          "description": "TCP/IP fundamentals, socket programming, and routing behavior"
+        },
+        {
+          "label": "OpenWrt",
+          "description": "Embedded router configuration and home network experimentation"
+        },
+        {
+          "label": "Security Tooling",
+          "description": "Working with network analysis tools such as Wireshark and terminal security utilities"
+        },
+        {
+          "label": "Ethical Hacking & CTF Learning",
+          "description": "Hands-on security exploration through controlled environments and problem-solving"
+        }
+      ]
+    }
+  ]
+}

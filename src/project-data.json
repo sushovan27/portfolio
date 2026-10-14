@@ -1,0 +1,175 @@
+[
+  {
+    "name": "HiveTrace",
+    "slug": "hivetrace",
+    "summary": "Honey supply-chain traceability protocol with role-based workspaces for apiaries, laboratories, processors, and distributors, paired with a consumer QR verification interface.",
+    "category": "active",
+    "status": "deployed",
+    "technologies": [
+      "TypeScript",
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "repositoryUrl": "https://github.com/sushovanbuilds/HiveTrace",
+    "liveUrl": "https://hivetrace-indol.vercel.app",
+    "previewImage": "/images/projects/hivetrace.webp",
+    "notes": "Experiment exploring traceability workflows for honey production; deployed on Vercel with consumer verification."
+  },
+  {
+    "name": "StegDetector",
+    "slug": "stegdetector",
+    "summary": "Image steganography triage web application combining deterministic image forensics with optional local or cloud LLM forensic reviews.",
+    "category": "active",
+    "status": "prototype",
+    "technologies": [
+      "Python",
+      "Flask",
+      "OpenCV",
+      "NumPy",
+      "SciPy",
+      "Ollama"
+    ],
+    "repositoryUrl": "https://github.com/sushovan27/stegdetector",
+    "liveUrl": "",
+    "previewImage": "/images/projects/stegdetector.webp",
+    "notes": "LSB bit analysis, Shannon entropy, and chi-square distribution for steganography triage."
+  },
+  {
+    "name": "E2EE Messaging",
+    "slug": "e2ee-messaging",
+    "summary": "Terminal-based end-to-end encrypted messaging system implementing forward secrecy through ephemeral X25519 Diffie-Hellman and AES-256-GCM.",
+    "category": "prototype",
+    "status": "prototype",
+    "technologies": [
+      "Python",
+      "Cryptography",
+      "X25519",
+      "AES-256-GCM",
+      "Sockets"
+    ],
+    "repositoryUrl": "https://github.com/sushovan27/e2ee-messaging",
+    "liveUrl": "",
+    "previewImage": "/images/projects/e2ee-messaging.webp",
+    "notes": "Encryption experiment with ephemeral keys and forward secrecy."
+  },
+  {
+    "name": "Jyotirveda Gurukulam Platform",
+    "slug": "jyotirveda-gurukulam",
+    "summary": "Full-stack educational platform with structured curriculum navigation and responsive editorial layout.",
+    "category": "active",
+    "status": "deployed",
+    "technologies": [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "repositoryUrl": "https://github.com/sushovan27/Jyotirveda-Gurukulam-Platform",
+    "liveUrl": "https://jyotirveda-gurukulam-platform.vercel.app",
+    "previewImage": "/images/projects/gurukulam.webp",
+    "notes": "Educational platform from sushovan27 profile; deployed on Vercel."
+  },
+  {
+    "name": "CLI Calculator with Expression Parsing",
+    "slug": "cli-expression-calculator",
+    "summary": "A dependency-free C arithmetic expression parser and interactive REPL.",
+    "category": "active",
+    "status": "active",
+    "technologies": [
+      "C",
+      "GCC",
+      "Clang",
+      "C Standard Library"
+    ],
+    "repositoryUrl": "https://github.com/sushovanbuilds/CLI-Calculator-with-expression-parsing",
+    "liveUrl": "",
+    "previewImage": "/images/projects/cli-calculator.webp",
+    "notes": "Dependency-free recursive descent parser in C99."
+  },
+  {
+    "name": "Personal Assistant CLI",
+    "slug": "personal-assistant",
+    "summary": "Modular command-line assistant and workflow automation scripts designed to streamline local developer tasks.",
+    "category": "prototype",
+    "status": "prototype",
+    "technologies": [
+      "Python",
+      "CLI Tooling",
+      "Automation"
+    ],
+    "repositoryUrl": "https://github.com/sushovanbuilds/Personal-Assistant",
+    "liveUrl": "",
+    "previewImage": "/images/projects/personal-assistant.webp",
+    "notes": "Experimental productivity tool exploring command chaining."
+  },
+  {
+    "name": "Bank Management System",
+    "slug": "bank-management-system",
+    "summary": "Terminal-driven bank management application demonstrating user authentication and transaction ledger operations in Python.",
+    "category": "active",
+    "status": "prototype",
+    "technologies": [
+      "Python",
+      "File I/O",
+      "Data Persistence"
+    ],
+    "repositoryUrl": "https://github.com/sushovan27/Bank-Management-System",
+    "liveUrl": "",
+    "previewImage": "/images/projects/bank-management.webp",
+    "notes": "Python CLI project for account state management."
+  },
+  {
+    "name": "UrbanGrowth Agency",
+    "slug": "urbangrowth-agency",
+    "summary": "Digital marketing agency website showcasing scaling solutions for businesses.",
+    "category": "active",
+    "status": "deployed",
+    "technologies": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Responsive UI"
+    ],
+    "repositoryUrl": "",
+    "liveUrl": "https://urbangrowthagency.sushovanhalder.me",
+    "previewImage": "/images/projects/urbangrowth.webp",
+    "notes": "Digital marketing agency website showcasing scaling solutions for businesses."
+  },
+  {
+    "name": "Horizons Travel Co.",
+    "slug": "horizons-travel",
+    "summary": "Travel booking platform for discovering and planning adventures.",
+    "category": "active",
+    "status": "deployed",
+    "technologies": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Web Architecture"
+    ],
+    "repositoryUrl": "",
+    "liveUrl": "https://horizonstravel.sushovanhalder.me",
+    "previewImage": "/images/projects/horizons.webp",
+    "notes": "Travel booking platform for discovering and planning adventures."
+  },
+  {
+    "name": "Saffron Culinary Canvas",
+    "slug": "saffron-culinary-canvas",
+    "summary": "Fine dining experience website showcasing culinary offerings.",
+    "category": "active",
+    "status": "deployed",
+    "technologies": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Interactive UI"
+    ],
+    "repositoryUrl": "",
+    "liveUrl": "https://saffronculinarycanvas.sushovanhalder.me",
+    "previewImage": "/images/projects/saffron.webp",
+    "notes": "Fine dining experience website showcasing culinary offerings."
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "name": "Sushovan Halder",
+  "headline": "I build, break down, and improve ideas through code.",
+  "shortBio": "Computer Science and Engineering student at RKMGEC, learning by building projects across web development, developer tooling, Linux, automation, and security-minded engineering.",
+  "education": {
+    "institution": "RKMGEC",
+    "program": "Computer Science and Engineering",
+    "status": "Student",
+    "expectedGraduation": null,
+    "startYear": null
+  },
+  "githubProfiles": [
+    {
+      "label": "GitHub · sushovanbuilds",
+      "url": "https://github.com/sushovanbuilds"
+    },
+    {
+      "label": "GitHub · sushovan27",
+      "url": "https://github.com/sushovan27"
+    }
+  ],
+  "email": {
+    "value": "sushovanhalderofficial@gmail.com",
+    "verifiedByOwner": true
+  },
+  "socials": [
+    {
+      "label": "X",
+      "url": "https://x.com/sushovanhalder",
+      "includeByDefault": false
+    },
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/thalassophile_sushovan",
+      "includeByDefault": false
+    }
+  ],
+  "availability": {
+    "text": null,
+    "verified": false
+  },
+  "contentNotes": [
+    "Confirm preferred expansion of RKMGEC before publication.",
+    "Do not invent graduation dates, student year, or achievements."
+  ]
+}

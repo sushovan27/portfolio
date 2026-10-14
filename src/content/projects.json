@@ -1,0 +1,216 @@
+[
+  {
+    "slug": "hivetrace",
+    "name": "HiveTrace",
+    "category": "Distributed Systems / Traceability",
+    "summary": "Honey supply-chain traceability protocol with role-based workspaces for apiaries, laboratories, processors, and distributors, paired with a consumer QR verification interface.",
+    "status": "deployed",
+    "technologies": [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    "repositoryUrl": "https://github.com/sushovanbuilds/HiveTrace",
+    "liveUrl": "https://hivetrace-indol.vercel.app",
+    "previewImage": "/images/projects/hivetrace.webp",
+    "featured": true,
+    "verified": true,
+    "telemetry": "SUPPLY CHAIN // TAMPER-EVIDENT LEDGER",
+    "specBadge": "01 // DEPLOYED SYSTEM",
+    "notes": "Architecture strictly separates laboratory purity certificates from tamper-evident ledger event anchoring."
+  },
+  {
+    "slug": "stegdetector",
+    "name": "StegDetector",
+    "category": "Forensics / Security Learning",
+    "summary": "Image steganography triage web application combining deterministic image forensics (LSB bit-plane slicing, Shannon entropy, chi-square distribution) with optional local or cloud LLM forensic reviews.",
+    "status": "prototype",
+    "technologies": [
+      "Python",
+      "Flask",
+      "OpenCV",
+      "NumPy",
+      "SciPy",
+      "Ollama"
+    ],
+    "repositoryUrl": "https://github.com/sushovan27/stegdetector",
+    "liveUrl": null,
+    "previewImage": "/images/projects/stegdetector.webp",
+    "featured": true,
+    "verified": true,
+    "telemetry": "FORENSICS // STATISTICAL LSB TRIAGE",
+    "specBadge": "02 // FORENSIC LAB",
+    "notes": "Generates visual bit-plane slices, RGB histograms, and LSB density heatmaps with deterministic rule-based fallback."
+  },
+  {
+    "slug": "e2ee-messaging",
+    "name": "E2EE Messaging",
+    "category": "Cryptography / Networking",
+    "summary": "Terminal-based end-to-end encrypted messaging system implementing forward secrecy through ephemeral X25519 Diffie-Hellman key exchanges and AES-256-GCM authenticated encryption.",
+    "status": "prototype",
+    "technologies": [
+      "Python",
+      "Cryptography",
+      "X25519",
+      "AES-256-GCM",
+      "Socket Networking"
+    ],
+    "repositoryUrl": "https://github.com/sushovan27/e2ee-messaging",
+    "liveUrl": null,
+    "previewImage": "/images/projects/e2ee-messaging.webp",
+    "featured": true,
+    "verified": true,
+    "telemetry": "CRYPTO // X25519 + AES-256-GCM",
+    "specBadge": "03 // NETWORK PROTOCOL",
+    "notes": "Relay server only forwards ciphertexts; verified via packet inspection that plaintext never hits the wire."
+  },
+  {
+    "slug": "jyotirveda-gurukulam",
+    "name": "Jyotirveda Gurukulam Platform",
+    "category": "Web Engineering / Production Platform",
+    "summary": "Full-stack educational platform with structured curriculum navigation, responsive editorial layout, and interactive learning tools.",
+    "status": "deployed",
+    "technologies": [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "repositoryUrl": "https://github.com/sushovan27/Jyotirveda-Gurukulam-Platform",
+    "liveUrl": "https://jyotirveda-gurukulam-platform.vercel.app",
+    "previewImage": "/images/projects/gurukulam.webp",
+    "featured": true,
+    "verified": true,
+    "telemetry": "WEB APP // VERCEL DEPLOYMENT",
+    "specBadge": "04 // WEB PLATFORM",
+    "notes": "Production-deployed educational learning interface with responsive navigation."
+  },
+  {
+    "slug": "cli-expression-calculator",
+    "name": "CLI Calculator with Expression Parsing",
+    "category": "Systems Programming / Algorithms",
+    "summary": "A dependency-free command-line arithmetic expression evaluator in C that parses infix expressions with correct operator precedence, unary minus, and parenthesis grouping.",
+    "status": "active",
+    "technologies": [
+      "C",
+      "GCC",
+      "Clang",
+      "C Standard Library"
+    ],
+    "repositoryUrl": "https://github.com/sushovanbuilds/CLI-Calculator-with-expression-parsing",
+    "liveUrl": null,
+    "previewImage": "/images/projects/cli-calculator.webp",
+    "featured": false,
+    "verified": true,
+    "telemetry": "PARSER // RECURSIVE INFIX EVALUATOR",
+    "specBadge": "05 // C SYSTEM",
+    "notes": "Zero external dependencies; interactive REPL with syntax validation and division-by-zero protection."
+  },
+  {
+    "slug": "personal-assistant",
+    "name": "Personal Assistant CLI",
+    "category": "Automation / Developer Tools",
+    "summary": "Modular command-line assistant and workflow automation scripts designed to streamline local developer tasks and system shortcuts.",
+    "status": "prototype",
+    "technologies": [
+      "Python",
+      "CLI Tooling",
+      "Automation"
+    ],
+    "repositoryUrl": "https://github.com/sushovanbuilds/Personal-Assistant",
+    "liveUrl": null,
+    "previewImage": "/images/projects/personal-assistant.webp",
+    "featured": false,
+    "verified": true,
+    "telemetry": "WORKFLOW // LOCAL AUTOMATION",
+    "specBadge": "06 // SCRIPTING",
+    "notes": "Experimental productivity tool exploring command chaining and automated task dispatch."
+  },
+  {
+    "slug": "bank-management-system",
+    "name": "Bank Management System",
+    "category": "Application / Learning Project",
+    "summary": "Terminal-driven bank management application demonstrating user authentication, transaction persistence, and balance ledger operations in Python.",
+    "status": "prototype",
+    "technologies": [
+      "Python",
+      "File I/O",
+      "Data Persistence"
+    ],
+    "repositoryUrl": "https://github.com/sushovan27/Bank-Management-System",
+    "liveUrl": null,
+    "previewImage": "/images/projects/bank-management.webp",
+    "featured": false,
+    "verified": true,
+    "telemetry": "APP // ACCOUNT STATE ENGINE",
+    "specBadge": "07 // APPLICATION",
+    "notes": "Educational software project demonstrating account management logic."
+  },
+  {
+    "slug": "urbangrowth-agency",
+    "name": "UrbanGrowth Agency",
+    "category": "Web Engineering / Agency Platform",
+    "summary": "Digital marketing agency website showcasing scaling solutions for businesses.",
+    "status": "deployed",
+    "technologies": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Responsive UI"
+    ],
+    "repositoryUrl": null,
+    "liveUrl": "https://urbangrowthagency.sushovanhalder.me",
+    "previewImage": "/images/projects/urbangrowth.webp",
+    "featured": false,
+    "verified": true,
+    "telemetry": "WEB APP // DIGITAL AGENCY",
+    "specBadge": "08 // DEPLOYED PLATFORM",
+    "notes": "Deployed client-facing digital marketing agency website showcasing scaling solutions."
+  },
+  {
+    "slug": "horizons-travel",
+    "name": "Horizons Travel Co.",
+    "category": "Web Engineering / Travel Platform",
+    "summary": "Travel booking platform for discovering and planning adventures.",
+    "status": "deployed",
+    "technologies": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Web Architecture"
+    ],
+    "repositoryUrl": null,
+    "liveUrl": "https://horizonstravel.sushovanhalder.me",
+    "previewImage": "/images/projects/horizons.webp",
+    "featured": false,
+    "verified": true,
+    "telemetry": "WEB APP // TRAVEL PLATFORM",
+    "specBadge": "09 // DEPLOYED PLATFORM",
+    "notes": "Deployed travel booking platform for discovering and planning adventures."
+  },
+  {
+    "slug": "saffron-culinary-canvas",
+    "name": "Saffron Culinary Canvas",
+    "category": "Web Engineering / Fine Dining",
+    "summary": "Fine dining experience website showcasing culinary offerings.",
+    "status": "deployed",
+    "technologies": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Interactive UI"
+    ],
+    "repositoryUrl": null,
+    "liveUrl": "https://saffronculinarycanvas.sushovanhalder.me",
+    "previewImage": "/images/projects/saffron.webp",
+    "featured": false,
+    "verified": true,
+    "telemetry": "WEB APP // CULINARY SHOWCASE",
+    "specBadge": "10 // DEPLOYED PLATFORM",
+    "notes": "Deployed fine dining experience website showcasing culinary offerings."
+  }
+]

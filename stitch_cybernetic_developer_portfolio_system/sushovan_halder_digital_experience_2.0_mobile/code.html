@@ -1,0 +1,881 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_tab" name="shell-type">
+<title>Sushovan Halder — Portfolio &amp; Systems Architecture</title>
+<!-- Fonts: Space Grotesk (headings), Inter (body), JetBrains Mono (metadata/tech tags) -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "surface-light": "#F3F2EF",
+            "text-primary": "#17181B",
+            "surface-dark": "#111317",
+            "sensor-amber": "#FF793D",
+            "text-muted": "#777A80",
+            "border-subtle": "#D5D6D7",
+            "surface-container": "#EAE8E4",
+            "surface-card": "#FFFFFF",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "mono": ["JetBrains Mono", "monospace"],
+          }
+        }
+      }
+    };
+</script>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #F3F2EF;
+        color: #17181B;
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      body {
+        overscroll-behavior-y: none;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 16px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .blend-multiply {
+      mix-blend-mode: multiply;
+    }
+    .tag-active {
+      border-color: #FF793D !important;
+      background-color: #FFFFFF !important;
+      box-shadow: 0 0 0 2px rgba(255, 121, 61, 0.2);
+    }
+</style>
+</head>
+<body class="bg-surface-light text-text-primary min-h-screen flex flex-col relative antialiased selection:bg-sensor-amber/20 selection:text-text-primary">
+<!-- TOP APP BAR -->
+<header class="fixed top-0 inset-x-0 z-50 pt-safe bg-surface-light/90 backdrop-blur-md border-b border-border-subtle/60 transition-all">
+<div class="h-14 px-4 max-w-[420px] mx-auto flex items-center justify-between">
+<!-- Left: Monogram Badge & Live Status Pill -->
+<div class="flex items-center gap-2.5">
+<a class="w-8 h-8 rounded-lg bg-surface-dark text-white flex items-center justify-center font-display font-bold text-xs tracking-tight active:scale-95 transition-transform shadow-xs" href="#hero">
+        SH
+      </a>
+<div class="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/90 border border-border-subtle shadow-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sensor-amber opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-sensor-amber"></span>
+</span>
+<span class="font-mono text-[10px] font-medium text-text-primary uppercase tracking-tight">Open to opportunities</span>
+</div>
+</div>
+<!-- Right: Clean Minimalist Terminal / Focus Switch -->
+<a aria-label="Quick Connect" class="w-8 h-8 rounded-full bg-white/90 border border-border-subtle flex items-center justify-center text-text-primary active:bg-surface-container transition-colors shadow-xs" href="#contact">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+</div>
+</header>
+<!-- MAIN SCROLL CONTAINER -->
+<main class="flex flex-col w-full pt-20 pb-28 px-4 max-w-[420px] mx-auto overflow-x-hidden">
+<!-- 1. HERO SECTION (Headline First with Cybernetic Centerpiece) -->
+<section class="flex flex-col pt-1 pb-6" id="hero">
+<!-- Monospace tracking label -->
+<div class="flex items-center gap-2 mb-2.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="font-mono text-[11px] tracking-wider text-text-muted uppercase">
+        Independent Builder / Developer
+      </span>
+</div>
+<!-- Editorial Headline -->
+<h1 class="font-display text-[42px] leading-[1.04] font-bold tracking-tight text-text-primary mb-3">
+      Sushovan Halder<span class="text-sensor-amber">.</span>
+</h1>
+<!-- Subtitle / Manifesto -->
+<p class="font-headline text-[18px] leading-snug font-medium text-text-primary mb-2">
+      I build at the intersection of software, AI, and security.
+    </p>
+<!-- Paragraph -->
+<p class="font-body text-[13.5px] leading-relaxed text-text-muted mb-5">
+      Web development, AI experiments, and systems exploration — turned into practical projects, one prototype at a time.
+    </p>
+<!-- High-Impact Dual CTAs with Amber Corner Bracket Accents -->
+<div class="flex items-center gap-2.5 mb-5">
+<a class="relative flex-1 h-11 px-4 rounded-lg bg-surface-dark text-white font-medium text-xs flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-xs overflow-hidden group" href="#projects">
+<!-- Amber Corner Bracket Accents -->
+<span class="absolute top-1 left-1 w-1.5 h-1.5 border-t border-l border-sensor-amber"></span>
+<span class="absolute bottom-1 right-1 w-1.5 h-1.5 border-b border-r border-sensor-amber"></span>
+<span class="font-mono tracking-tight font-semibold">Explore Projects</span>
+<span class="material-symbols-outlined text-[16px] text-sensor-amber group-active:translate-y-0.5 transition-transform">arrow_downward</span>
+</a>
+<a class="flex-1 h-11 px-4 rounded-lg bg-white border border-border-subtle text-text-primary font-medium text-xs flex items-center justify-center gap-1.5 active:bg-surface-container transition-colors shadow-xs" href="#contact">
+<span class="font-mono tracking-tight font-semibold">Get in Touch</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted">mail</span>
+</a>
+</div>
+<!-- Centerpiece Cybernetic Sculpture (Cutout integration on #F3F2EF) -->
+<div class="relative w-full flex flex-col items-center justify-center pt-2 pb-3 select-none">
+<!-- Ambient radial ground shadow -->
+<div class="absolute bottom-4 w-52 h-7 bg-black/15 blur-lg rounded-full pointer-events-none"></div>
+<!-- Cybernetic Bust with mix-blend-multiply & natural studio blend -->
+<div class="relative w-full max-w-[290px] aspect-[4/5] flex items-center justify-center">
+<img alt="Cybernetic bust sculpture with amber optic visor" class="w-full h-full object-contain pointer-events-none select-none drop-shadow-sm filter contrast-[1.03] transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1WjmrKUxa17EJen43zr36zLfditT1jHuqu5Vw7wD-kFKV93HIDrV9x5xR8mqR-xlk4Abz_ltxsj4-T3cBzs6jCbuG6hjbsV0efEM0FHLs06iprhvBHG4pjrIwKWfj-iP32UkjyXIyb7dLkF4T1wHXNO2FdD4fHcR0zlhcW_OGxCM0CKe623Geum8H_0caU8RaiEFRAmiobNeqNnzA7oY1mk0HH3xW-9exc-WElgvV5XLUU594Sco3Y9SxY" style="mix-blend-mode: multiply;">
+<!-- Interactive Cybernetic Focus Tags with Thin Technical Leader Lines -->
+<!-- Tag 1: AI Systems (Top Left) -->
+<button class="focus-tag absolute top-3 left-0 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs border border-border-subtle shadow-xs flex items-center gap-1.5 active:scale-95 transition-all text-left group" id="hero-tag-2" onclick="highlightFocus(2)" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber animate-pulse"></span>
+<span class="font-mono text-[10px] font-semibold text-text-primary">AI Systems</span>
+<!-- Leader Line -->
+<span class="absolute -right-3 top-1/2 w-3 h-px bg-sensor-amber/60 pointer-events-none"></span>
+</button>
+<!-- Tag 2: Cybersecurity (Top Right) -->
+<button class="focus-tag absolute top-8 right-0 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs border border-border-subtle shadow-xs flex items-center gap-1.5 active:scale-95 transition-all text-left group" id="hero-tag-3" onclick="highlightFocus(3)" type="button">
+<!-- Leader Line -->
+<span class="absolute -left-3 top-1/2 w-3 h-px bg-sensor-amber/60 pointer-events-none"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="font-mono text-[10px] font-semibold text-text-primary">Cybersecurity</span>
+</button>
+<!-- Tag 3: Web Engineering (Bottom Left) -->
+<button class="focus-tag absolute bottom-11 left-0 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs border border-border-subtle shadow-xs flex items-center gap-1.5 active:scale-95 transition-all text-left group" id="hero-tag-1" onclick="highlightFocus(1)" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="font-mono text-[10px] font-semibold text-text-primary">Web Engineering</span>
+<!-- Leader Line -->
+<span class="absolute -right-3 top-1/2 w-3 h-px bg-sensor-amber/60 pointer-events-none"></span>
+</button>
+<!-- Tag 4: Linux & Systems (Bottom Right) -->
+<button class="focus-tag absolute bottom-7 right-0 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs border border-border-subtle shadow-xs flex items-center gap-1.5 active:scale-95 transition-all text-left group" id="hero-tag-4" onclick="highlightFocus(4)" type="button">
+<!-- Leader Line -->
+<span class="absolute -left-3 top-1/2 w-3 h-px bg-sensor-amber/60 pointer-events-none"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="font-mono text-[10px] font-semibold text-text-primary">Linux &amp; Systems</span>
+</button>
+</div>
+<div class="mt-2 text-center">
+<span class="font-mono text-[10px] text-text-muted flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sensor-amber">touch_app</span> Tap any tag to reveal domain focus
+        </span>
+</div>
+</div>
+</section>
+<!-- 2. AREAS OF FOCUS & CYBERNETIC FOCUS SYSTEM -->
+<section class="flex flex-col pt-4 pb-8 border-t border-border-subtle/60" id="focus-section">
+<div class="flex items-center justify-between mb-3.5">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-wider text-sensor-amber font-semibold">Specialization</span>
+<h2 class="font-headline text-[22px] font-bold text-text-primary tracking-tight">Areas of Focus</h2>
+</div>
+<span class="font-mono text-[11px] text-text-muted px-2 py-0.5 rounded bg-surface-container">4 Domains</span>
+</div>
+<!-- Accordion Modules with Synchronized Amber Indicators -->
+<div class="flex flex-col gap-2.5" id="focus-accordion">
+<!-- Item 1: Web Engineering -->
+<div class="rounded-xl border border-border-subtle bg-white overflow-hidden transition-all shadow-xs relative" id="fcard-1">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-sensor-amber transition-all" id="fbar-1"></div>
+<button class="w-full px-4 py-3.5 pl-4 flex items-center justify-between text-left active:bg-surface-light" onclick="toggleFocus(1)" type="button">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-sensor-amber" id="fdot-1"></span>
+<span class="font-headline text-[15.5px] font-semibold text-text-primary">Web Engineering</span>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200 rotate-180" id="ficon-1">expand_more</span>
+</button>
+<div class="px-4 pb-4 pt-0 pl-4" id="fcontent-1">
+<p class="font-body text-[13px] leading-relaxed text-text-muted mb-3">
+            Building responsive, high-performance web applications and progressive prototypes with clean modern frontend architecture, modular UI components, and intuitive interactions.
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Next.js</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">TypeScript</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">React</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Tailwind CSS</span>
+</div>
+</div>
+</div>
+<!-- Item 2: AI & Automation -->
+<div class="rounded-xl border border-border-subtle bg-white overflow-hidden transition-all shadow-xs relative" id="fcard-2">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-transparent transition-all" id="fbar-2"></div>
+<button class="w-full px-4 py-3.5 pl-4 flex items-center justify-between text-left active:bg-surface-light" onclick="toggleFocus(2)" type="button">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-border-subtle" id="fdot-2"></span>
+<span class="font-headline text-[15.5px] font-semibold text-text-primary">AI &amp; Automation</span>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200" id="ficon-2">expand_more</span>
+</button>
+<div class="px-4 pb-4 pt-0 pl-4 hidden" id="fcontent-2">
+<p class="font-body text-[13px] leading-relaxed text-text-muted mb-3">
+            Exploring agent workflows, prompt chaining, local LLM deployment with quantized weights, and practical task automation pipelines for developer tooling.
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Ollama</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">LM Studio</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Python</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">LangChain</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Cybersecurity -->
+<div class="rounded-xl border border-border-subtle bg-white overflow-hidden transition-all shadow-xs relative" id="fcard-3">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-transparent transition-all" id="fbar-3"></div>
+<button class="w-full px-4 py-3.5 pl-4 flex items-center justify-between text-left active:bg-surface-light" onclick="toggleFocus(3)" type="button">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-border-subtle" id="fdot-3"></span>
+<span class="font-headline text-[15.5px] font-semibold text-text-primary">Cybersecurity</span>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200" id="ficon-3">expand_more</span>
+</button>
+<div class="px-4 pb-4 pt-0 pl-4 hidden" id="fcontent-3">
+<p class="font-body text-[13px] leading-relaxed text-text-muted mb-3">
+            Investigating network vulnerability assessment, defensive security practices, application security posture, and security tooling fundamentals.
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Network Security</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">OWASP</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Wireshark</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Nmap</span>
+</div>
+</div>
+</div>
+<!-- Item 4: Linux & Systems -->
+<div class="rounded-xl border border-border-subtle bg-white overflow-hidden transition-all shadow-xs relative" id="fcard-4">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-transparent transition-all" id="fbar-4"></div>
+<button class="w-full px-4 py-3.5 pl-4 flex items-center justify-between text-left active:bg-surface-light" onclick="toggleFocus(4)" type="button">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-border-subtle" id="fdot-4"></span>
+<span class="font-headline text-[15.5px] font-semibold text-text-primary">Linux &amp; Systems</span>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px] transition-transform duration-200" id="ficon-4">expand_more</span>
+</button>
+<div class="px-4 pb-4 pt-0 pl-4 hidden" id="fcontent-4">
+<p class="font-body text-[13px] leading-relaxed text-text-muted mb-3">
+            Daily Unix-based workstation engineering, custom shell automation, containerized local services, and system performance diagnostics.
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Linux</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Bash</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Docker</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle/80">Git</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SELECTED EXPERIMENTS (BESPOKE HORIZONTAL CAROUSEL) -->
+<section class="flex flex-col pt-4 pb-8 border-t border-border-subtle/60" id="projects">
+<div class="flex items-center justify-between mb-3.5">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-wider text-sensor-amber font-semibold">Featured Work</span>
+<h2 class="font-headline text-[22px] font-bold text-text-primary tracking-tight">Selected Projects</h2>
+</div>
+<div class="flex items-center gap-1 text-text-muted font-mono text-[11px]">
+<span class="">Swipe</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Horizontal Carousel Container -->
+<div class="relative w-full">
+<div class="flex gap-3 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-2 -mx-4 px-4 scroll-smooth" id="project-carousel">
+<!-- Card 1: Kernel Log (Editorial Micro-Publication) -->
+<article class="min-w-[85%] snap-center rounded-2xl bg-surface-dark text-white p-5 flex flex-col justify-between shadow-md relative overflow-hidden border border-white/10">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-sensor-amber"></div>
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono text-[10px] tracking-wider text-sensor-amber uppercase font-semibold">Publishing / Tech</span>
+<span class="font-mono text-[10px] text-zinc-400 bg-white/10 px-2 py-0.5 rounded">Active</span>
+</div>
+<!-- Micro-article title & badge -->
+<h3 class="font-headline text-[21px] font-bold text-white mb-2 tracking-tight">
+              Kernel Log
+            </h3>
+<div class="p-2.5 rounded-lg bg-white/5 border border-white/10 font-mono text-[11px] text-zinc-300 mb-3 flex items-center gap-2">
+<span class="text-sensor-amber font-bold">$</span>
+<span class="">cat /notes/systems_arch.md</span>
+</div>
+<p class="font-body text-[13px] text-zinc-300 leading-relaxed mb-4">
+              A technology blog and personal publishing project exploring Linux, software development, and deep technical notes.
+            </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="font-mono text-[10px] bg-white/10 text-zinc-300 px-2 py-0.5 rounded">Writing</span>
+<span class="font-mono text-[10px] bg-white/10 text-zinc-300 px-2 py-0.5 rounded">Linux</span>
+<span class="font-mono text-[10px] bg-white/10 text-zinc-300 px-2 py-0.5 rounded">Markdown</span>
+</div>
+<a class="w-full py-2.5 px-3 rounded-lg bg-white/10 hover:bg-white/15 text-white flex items-center justify-between font-mono text-[11px] font-semibold border border-white/10 transition-colors" href="#">
+<span class="">View Case Study</span>
+<span class="material-symbols-outlined text-[15px] text-sensor-amber">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2: HoneyChain — OriginHive (Decentralized Node Architecture) -->
+<article class="min-w-[85%] snap-center rounded-2xl bg-white border border-border-subtle p-5 flex flex-col justify-between shadow-xs relative">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono text-[10px] tracking-wider text-text-muted uppercase font-semibold">Hackathon</span>
+<span class="font-mono text-[10px] text-text-primary bg-surface-container px-2 py-0.5 rounded font-medium">Prototype</span>
+</div>
+<h3 class="font-headline text-[21px] font-bold text-text-primary mb-2 tracking-tight">
+              HoneyChain — OriginHive
+            </h3>
+<!-- Node visual representation -->
+<div class="p-2.5 rounded-lg bg-surface-light border border-border-subtle font-mono text-[10px] text-text-muted mb-3 flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-sensor-amber"></span>Apiary Node #04</span>
+<span class="text-text-primary font-medium">Verified On-Chain</span>
+</div>
+<p class="font-body text-[13px] text-text-muted leading-relaxed mb-4">
+              A blockchain-based honey traceability and smart beekeeping concept, built in a hackathon to verify origins and support apiaries.
+            </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">Blockchain</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">IoT Concept</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">Smart Contracts</span>
+</div>
+<a class="w-full py-2.5 px-3 rounded-lg bg-surface-light hover:bg-surface-container text-text-primary flex items-center justify-between font-mono text-[11px] font-semibold border border-border-subtle transition-colors" href="#">
+<span class="">View Case Study</span>
+<span class="material-symbols-outlined text-[15px] text-text-primary">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3: SLDungeons (Game Dungeon Management Plugin) -->
+<article class="min-w-[85%] snap-center rounded-2xl bg-white border border-border-subtle p-5 flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono text-[10px] tracking-wider text-text-muted uppercase font-semibold">Gaming / Java</span>
+<span class="font-mono text-[10px] text-text-primary bg-surface-container px-2 py-0.5 rounded font-medium">Plugin</span>
+</div>
+<h3 class="font-headline text-[21px] font-bold text-text-primary mb-2 tracking-tight">
+              SLDungeons
+            </h3>
+<div class="p-2.5 rounded-lg bg-surface-dark text-white font-mono text-[10px] mb-3 flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>Instance Engine</span>
+<span class="text-zinc-400">Spigot API / Java</span>
+</div>
+<p class="font-body text-[13px] text-text-muted leading-relaxed mb-4">
+              A Solo Leveling-inspired Minecraft dungeon and instance-management plugin built with custom game mechanics and session isolation.
+            </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">Java</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">Spigot API</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">Game Logic</span>
+</div>
+<a class="w-full py-2.5 px-3 rounded-lg bg-surface-light hover:bg-surface-container text-text-primary flex items-center justify-between font-mono text-[11px] font-semibold border border-border-subtle transition-colors" href="#">
+<span class="">View Case Study</span>
+<span class="material-symbols-outlined text-[15px] text-text-primary">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4: Market Dashboard (High-Precision Charting UI) -->
+<article class="min-w-[85%] snap-center rounded-2xl bg-white border border-border-subtle p-5 flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono text-[10px] tracking-wider text-text-muted uppercase font-semibold">Frontend / Data</span>
+<span class="font-mono text-[10px] text-text-primary bg-surface-container px-2 py-0.5 rounded font-medium">Web App</span>
+</div>
+<h3 class="font-headline text-[21px] font-bold text-text-primary mb-2 tracking-tight">
+              Market Dashboard
+            </h3>
+<div class="p-2.5 rounded-lg bg-surface-light border border-border-subtle font-mono text-[10px] text-text-muted mb-3 flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Data Streams 60fps</span>
+<span class="text-text-primary font-medium">WebSockets</span>
+</div>
+<p class="font-body text-[13px] text-text-muted leading-relaxed mb-4">
+              An experimental web project inspired by interactive financial charting platforms, focusing on real-time data flow and fluid interactions.
+            </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">TypeScript</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">Data Viz</span>
+<span class="font-mono text-[10px] bg-surface-light text-text-primary px-2 py-0.5 rounded border border-border-subtle">Web UI</span>
+</div>
+<a class="w-full py-2.5 px-3 rounded-lg bg-surface-light hover:bg-surface-container text-text-primary flex items-center justify-between font-mono text-[11px] font-semibold border border-border-subtle transition-colors" href="#">
+<span class="">View Case Study</span>
+<span class="material-symbols-outlined text-[15px] text-text-primary">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Carousel Pagination Dots -->
+<div class="flex items-center justify-center gap-1.5 mt-3" id="carousel-dots">
+<button aria-label="Go to slide 1" class="w-6 h-1.5 rounded-full bg-sensor-amber transition-all" onclick="scrollCarousel(0)" type="button"></button>
+<button aria-label="Go to slide 2" class="w-1.5 h-1.5 rounded-full bg-border-subtle transition-all" onclick="scrollCarousel(1)" type="button"></button>
+<button aria-label="Go to slide 3" class="w-1.5 h-1.5 rounded-full bg-border-subtle transition-all" onclick="scrollCarousel(2)" type="button"></button>
+<button aria-label="Go to slide 4" class="w-1.5 h-1.5 rounded-full bg-border-subtle transition-all" onclick="scrollCarousel(3)" type="button"></button>
+</div>
+</div>
+</section>
+<!-- 4. CAPABILITY MAP (INTERACTIVE MOBILE ACCORDIONS WITH VERIFIED LINKAGE) -->
+<section class="flex flex-col pt-4 pb-8 border-t border-border-subtle/60" id="skills">
+<div class="flex items-center justify-between mb-2">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-wider text-sensor-amber font-semibold">Capabilities</span>
+<h2 class="font-headline text-[22px] font-bold text-text-primary tracking-tight">My Toolkit</h2>
+</div>
+</div>
+<!-- Interactive Chip Legend -->
+<div class="flex items-center justify-between mb-3.5 py-2 px-3 rounded-lg bg-white border border-border-subtle shadow-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-xs bg-surface-light border border-border-subtle"></span>
+<span class="font-mono text-[10px] text-text-muted">Used in project</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-xs bg-transparent border border-dashed border-text-muted"></span>
+<span class="font-mono text-[10px] text-text-muted">Currently learning</span>
+</div>
+</div>
+<!-- Active Skill Note Banner -->
+<div class="hidden mb-3 p-2.5 rounded-lg bg-surface-container border border-border-subtle font-mono text-[11px] text-text-primary flex items-center justify-between animate-fadeIn" id="skill-note">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span id="skill-note-text" class="">Select a chip to see linkage</span>
+</div>
+<button class="text-text-muted hover:text-text-primary" onclick="dismissSkillNote()" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<!-- Toolkit Accordions -->
+<div class="flex flex-col gap-2">
+<!-- 1. Frontend & Web -->
+<div class="rounded-xl border border-border-subtle bg-white overflow-hidden shadow-xs">
+<button class="w-full px-4 py-3 flex items-center justify-between text-left active:bg-surface-light" onclick="toggleToolkit(1)" type="button">
+<span class="font-headline text-[15px] font-semibold text-text-primary">Frontend &amp; Web</span>
+<span class="material-symbols-outlined text-text-muted text-[18px] transition-transform duration-200 rotate-180" id="ticon-1">expand_more</span>
+</button>
+<div class="px-4 pb-3.5 pt-0" id="tcontent-1">
+<div class="flex flex-wrap gap-2">
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Next.js', 'Production frontend framework used across modern web apps.')" type="button">Next.js</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('TypeScript', 'Primary language for type-safe interface architectures.')" type="button">TypeScript</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('React', 'Component lifecycle and state handling across UI prototypes.')" type="button">React</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Vite', 'Rapid bundling and development tooling.')" type="button">Vite</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Tailwind CSS', 'Utility-first layout engines and custom design systems.')" type="button">Tailwind CSS</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('HTML5 / CSS3', 'Semantic structure and modern CSS layout models.')" type="button">HTML5 / CSS3</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-transparent text-text-muted border border-dashed border-text-muted font-medium active:border-sensor-amber" onclick="showSkillNote('Astro', 'Active learning: Content-focused static architectures.')" type="button">Astro</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-transparent text-text-muted border border-dashed border-text-muted font-medium active:border-sensor-amber" onclick="showSkillNote('Web Audio API', 'Active learning: Synthesizer nodes and sound design.')" type="button">Web Audio API</button>
+</div>
+</div>
+</div>
+<!-- 2. AI & Automation -->
+<div class="rounded-xl border border-border-subtle bg-white overflow-hidden shadow-xs">
+<button class="w-full px-4 py-3 flex items-center justify-between text-left active:bg-surface-light" onclick="toggleToolkit(2)" type="button">
+<span class="font-headline text-[15px] font-semibold text-text-primary">AI &amp; Automation</span>
+<span class="material-symbols-outlined text-text-muted text-[18px] transition-transform duration-200" id="ticon-2">expand_more</span>
+</button>
+<div class="px-4 pb-3.5 pt-0 hidden" id="tcontent-2">
+<div class="flex flex-wrap gap-2">
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Ollama', 'Local LLM inference runner for specialized developer tasks.')" type="button">Ollama</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('LM Studio', 'Benchmarking local quantized GGUF models.')" type="button">LM Studio</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Python', 'Scripting, pipeline integration, and neural tooling.')" type="button">Python</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Prompt Engineering', 'Structured instruction pipelines and schema enforcement.')" type="button">Prompt Engineering</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-transparent text-text-muted border border-dashed border-text-muted font-medium active:border-sensor-amber" onclick="showSkillNote('LangChain', 'Active learning: Autonomous agent routing.')" type="button">LangChain</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-transparent text-text-muted border border-dashed border-text-muted font-medium active:border-sensor-amber" onclick="showSkillNote('Transformers', 'Active learning: HuggingFace model architectures.')" type="button">Transformers</button>
+</div>
+</div>
+</div>
+<!-- 3. Systems & Infrastructure -->
+<div class="rounded-xl border border-border-subtle bg-white overflow-hidden shadow-xs">
+<button class="w-full px-4 py-3 flex items-center justify-between text-left active:bg-surface-light" onclick="toggleToolkit(3)" type="button">
+<span class="font-headline text-[15px] font-semibold text-text-primary">Systems &amp; Infrastructure</span>
+<span class="material-symbols-outlined text-text-muted text-[18px] transition-transform duration-200" id="ticon-3">expand_more</span>
+</button>
+<div class="px-4 pb-3.5 pt-0 hidden" id="tcontent-3">
+<div class="flex flex-wrap gap-2">
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Linux', 'Debian and Arch workstation engineering &amp; daily driver.')" type="button">Linux</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Docker', 'Containerized development workflows and service isolation.')" type="button">Docker</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Bash Scripting', 'Automation toolchains and system diagnostics scripts.')" type="button">Bash Scripting</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Git / GitHub', 'Version control and CI deployment actions.')" type="button">Git / GitHub</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-transparent text-text-muted border border-dashed border-text-muted font-medium active:border-sensor-amber" onclick="showSkillNote('Podman', 'Active learning: Rootless container daemon alternative.')" type="button">Podman</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-transparent text-text-muted border border-dashed border-text-muted font-medium active:border-sensor-amber" onclick="showSkillNote('Nginx', 'Active learning: Reverse proxy routing and SSL setups.')" type="button">Nginx</button>
+</div>
+</div>
+</div>
+<!-- 4. Security -->
+<div class="rounded-xl border border-border-subtle bg-white overflow-hidden shadow-xs">
+<button class="w-full px-4 py-3 flex items-center justify-between text-left active:bg-surface-light" onclick="toggleToolkit(4)" type="button">
+<span class="font-headline text-[15px] font-semibold text-text-primary">Security</span>
+<span class="material-symbols-outlined text-text-muted text-[18px] transition-transform duration-200" id="ticon-4">expand_more</span>
+</button>
+<div class="px-4 pb-3.5 pt-0 hidden" id="tcontent-4">
+<div class="flex flex-wrap gap-2">
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Network Fundamentals', 'TCP/IP routing, DNS resolution, and packet inspection.')" type="button">Network Fundamentals</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('OWASP Top 10', 'Web vulnerability mitigation and authentication flows.')" type="button">OWASP Top 10</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-surface-light text-text-primary border border-border-subtle font-medium active:border-sensor-amber" onclick="showSkillNote('Linux Permissions', 'User privileges, sudoers, and file access hardening.')" type="button">Linux Permissions</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-transparent text-text-muted border border-dashed border-text-muted font-medium active:border-sensor-amber" onclick="showSkillNote('Burp Suite', 'Active learning: HTTP proxy testing and vulnerability triage.')" type="button">Burp Suite</button>
+<button class="font-mono text-[11px] px-2.5 py-1 rounded-md bg-transparent text-text-muted border border-dashed border-text-muted font-medium active:border-sensor-amber" onclick="showSkillNote('Cryptography', 'Active learning: Asymmetric primitives and hashing schemes.')" type="button">Cryptography</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. BEYOND THE INTERFACE & CURRENTLY EXPLORING -->
+<section class="flex flex-col pt-4 pb-8 border-t border-border-subtle/60" id="about">
+<div class="flex items-center justify-between mb-3.5">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-wider text-sensor-amber font-semibold">Background</span>
+<h2 class="font-headline text-[22px] font-bold text-text-primary tracking-tight">Beyond the Interface</h2>
+</div>
+</div>
+<!-- Editorial Narrative -->
+<p class="font-body text-[13.5px] leading-relaxed text-text-muted mb-4">
+      I believe that the best systems are constructed with intentionality, curiosity, and respect for both simplicity and security. Whether drafting interactive interfaces or tuning local machines, my focus is practical engineering that solves genuine problems.
+    </p>
+<!-- Monochrome Avatar Insignia Card -->
+<div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white border border-border-subtle mb-6 shadow-xs">
+<div class="w-12 h-12 rounded-lg bg-surface-dark flex items-center justify-center text-white font-display text-base font-bold shrink-0 shadow-xs">
+        SH
+      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline font-semibold text-text-primary text-[15px] truncate">Sushovan Halder</span>
+<span class="font-mono text-[11px] text-text-muted truncate">Builder • Student • Technologist</span>
+</div>
+</div>
+<!-- Chronological Mobile Timeline with Amber Glowing Active Pulse -->
+<div class="relative pl-6 space-y-5 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-border-subtle mb-8">
+<!-- Timeline Item 1: Now (Glowing Amber Pulse) -->
+<div class="relative">
+<div class="absolute -left-6 top-1 flex items-center justify-center">
+<span class="absolute inline-flex h-4 w-4 rounded-full bg-sensor-amber opacity-40 animate-ping"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-sensor-amber ring-4 ring-surface-light"></span>
+</div>
+<span class="font-mono text-[10px] text-sensor-amber uppercase font-semibold">Now</span>
+<h4 class="font-headline text-[14px] font-semibold text-text-primary mt-0.5">Active Focus</h4>
+<p class="font-body text-[12px] text-text-muted mt-0.5">
+          Exploring AI systems, security posture, and Linux infrastructure engineering.
+        </p>
+</div>
+<!-- Timeline Item 2: Kernel Log -->
+<div class="relative">
+<div class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-border-subtle ring-4 ring-surface-light"></div>
+<span class="font-mono text-[10px] text-text-muted uppercase">Recent</span>
+<h4 class="font-headline text-[14px] font-semibold text-text-primary mt-0.5">Kernel Log Launched</h4>
+<p class="font-body text-[12px] text-text-muted mt-0.5">
+          Established personal technical publication covering systems and software findings.
+        </p>
+</div>
+<!-- Timeline Item 3: HoneyChain Hackathon -->
+<div class="relative">
+<div class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-border-subtle ring-4 ring-surface-light"></div>
+<span class="font-mono text-[10px] text-text-muted uppercase">Hackathon</span>
+<h4 class="font-headline text-[14px] font-semibold text-text-primary mt-0.5">HoneyChain — OriginHive</h4>
+<p class="font-body text-[12px] text-text-muted mt-0.5">
+          Designed decentralized honey traceability concept under competitive hackathon timeline.
+        </p>
+</div>
+<!-- Timeline Item 4: First Web Projects -->
+<div class="relative">
+<div class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-border-subtle ring-4 ring-surface-light"></div>
+<span class="font-mono text-[10px] text-text-muted uppercase">Foundational</span>
+<h4 class="font-headline text-[14px] font-semibold text-text-primary mt-0.5">First Web Projects</h4>
+<p class="font-body text-[12px] text-text-muted mt-0.5">
+          Began architecting frontend prototypes and hands-on JavaScript applications.
+        </p>
+</div>
+<!-- Timeline Item 5: Education -->
+<div class="relative">
+<div class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-border-subtle ring-4 ring-surface-light"></div>
+<span class="font-mono text-[10px] text-text-muted uppercase">Education</span>
+<h4 class="font-headline text-[14px] font-semibold text-text-primary mt-0.5">B.Tech in Computer Science</h4>
+<p class="font-body text-[12px] text-text-muted mt-0.5">
+          Undergraduate studies focusing on algorithms, systems, and network principles.
+        </p>
+</div>
+<!-- Add achievement placeholder -->
+<div class="relative pt-1">
+<div class="absolute -left-6 top-2 w-2.5 h-2.5 rounded-full border border-dashed border-text-muted bg-surface-light"></div>
+<span class="font-mono text-[11px] text-text-muted italic flex items-center gap-1">
+          + Add a certification or achievement
+        </span>
+</div>
+</div>
+<!-- 4 Interactive Research Modules: Currently Exploring -->
+<div class="pt-2">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-mono text-[10px] uppercase tracking-wider text-sensor-amber font-semibold">Radar</span>
+<h3 class="font-headline text-[18px] font-bold text-text-primary tracking-tight">Currently Exploring</h3>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- 1. AI Systems -->
+<div class="p-3 rounded-xl bg-white border border-border-subtle flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-sensor-amber/15 text-sensor-amber font-semibold">Building</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted">psychology</span>
+</div>
+<h4 class="font-headline text-[13px] font-bold text-text-primary leading-tight mb-1">AI Systems</h4>
+<p class="font-body text-[11px] text-text-muted leading-snug">
+              Autonomous agent toolchains and local model runtimes.
+            </p>
+</div>
+</div>
+<!-- 2. Security -->
+<div class="p-3 rounded-xl bg-white border border-border-subtle flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-text-muted font-medium">Exploring</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted">shield</span>
+</div>
+<h4 class="font-headline text-[13px] font-bold text-text-primary leading-tight mb-1">Security</h4>
+<p class="font-body text-[11px] text-text-muted leading-snug">
+              Web application auditing and cryptographic workflows.
+            </p>
+</div>
+</div>
+<!-- 3. Full-Stack Development -->
+<div class="p-3 rounded-xl bg-white border border-border-subtle flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-sensor-amber/15 text-sensor-amber font-semibold">Building</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted">layers</span>
+</div>
+<h4 class="font-headline text-[13px] font-bold text-text-primary leading-tight mb-1">Full-Stack Dev</h4>
+<p class="font-body text-[11px] text-text-muted leading-snug">
+              Modern reactive interfaces and lightweight API design.
+            </p>
+</div>
+</div>
+<!-- 4. Linux Infrastructure -->
+<div class="p-3 rounded-xl bg-white border border-border-subtle flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-surface-container text-text-muted font-medium">Exploring</span>
+<span class="material-symbols-outlined text-[16px] text-text-muted">terminal</span>
+</div>
+<h4 class="font-headline text-[13px] font-bold text-text-primary leading-tight mb-1">Linux Infra</h4>
+<p class="font-body text-[11px] text-text-muted leading-snug">
+              Container isolation and custom desktop environments.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. CONTACT & FOOTER (DARK CONTAINER #111317) -->
+<section class="flex flex-col p-5 rounded-2xl bg-surface-dark text-white mb-6 shadow-lg border border-white/5" id="contact">
+<div class="mb-4">
+<span class="font-mono text-[10px] tracking-wider text-sensor-amber uppercase font-semibold">Get in Touch</span>
+<h2 class="font-headline text-[22px] font-bold text-white tracking-tight mt-1 mb-1.5">
+        Have something interesting in mind?
+      </h2>
+<p class="font-body text-[13px] text-zinc-400 leading-relaxed">
+        I'm always open to discussing new projects, collaborative ideas, or opportunities in AI and systems development.
+      </p>
+</div>
+<!-- Quick Action Links -->
+<div class="grid grid-cols-2 gap-2 mb-5">
+<a class="h-10 px-3 rounded-lg bg-white/10 hover:bg-white/15 text-white flex items-center justify-center gap-1.5 font-mono text-[11px] font-medium transition-colors border border-white/5" href="mailto:contact@sushovan.dev">
+<span class="material-symbols-outlined text-[16px] text-sensor-amber">mail</span>
+<span class="">Email Me</span>
+</a>
+<a class="h-10 px-3 rounded-lg bg-white/10 hover:bg-white/15 text-white flex items-center justify-center gap-1.5 font-mono text-[11px] font-medium transition-colors border border-white/5" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span class="">GitHub</span>
+</a>
+<a class="h-10 px-3 rounded-lg bg-white/10 hover:bg-white/15 text-white flex items-center justify-center gap-1.5 font-mono text-[11px] font-medium transition-colors border border-white/5" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span class="">LinkedIn</span>
+</a>
+<a class="h-10 px-3 rounded-lg bg-white/10 hover:bg-white/15 text-white flex items-center justify-center gap-1.5 font-mono text-[11px] font-medium transition-colors border border-white/5" href="#">
+<span class="material-symbols-outlined text-[16px] text-sensor-amber">description</span>
+<span class="">Résumé</span>
+</a>
+</div>
+<!-- Streamlined Touch-Optimized Form -->
+<form class="space-y-2.5" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+<div>
+<label class="block font-mono text-[10px] text-zinc-400 uppercase mb-1" for="contact-name">Your Name</label>
+<input class="w-full h-10 px-3 rounded-lg bg-white/5 border border-white/15 text-white text-[13px] placeholder:text-zinc-500 focus:outline-hidden focus:border-sensor-amber" id="contact-name" placeholder="Jane Doe" required="" type="text">
+</div>
+<div>
+<label class="block font-mono text-[10px] text-zinc-400 uppercase mb-1" for="contact-email">Your Email</label>
+<input class="w-full h-10 px-3 rounded-lg bg-white/5 border border-white/15 text-white text-[13px] placeholder:text-zinc-500 focus:outline-hidden focus:border-sensor-amber" id="contact-email" placeholder="jane@example.com" required="" type="email">
+</div>
+<div>
+<label class="block font-mono text-[10px] text-zinc-400 uppercase mb-1" for="contact-msg">Message</label>
+<textarea class="w-full p-3 rounded-lg bg-white/5 border border-white/15 text-white text-[13px] placeholder:text-zinc-500 focus:outline-hidden focus:border-sensor-amber resize-none" id="contact-msg" placeholder="Hello Sushovan, let's connect regarding..." required="" rows="3"></textarea>
+</div>
+<button class="w-full h-11 rounded-lg bg-sensor-amber text-white font-medium text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-2 active:opacity-90 transition-opacity mt-2 shadow-xs" type="submit">
+<span class="">Send Message</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</form>
+<!-- Footer & Return to Top -->
+<div class="flex items-center justify-between pt-5 mt-5 border-t border-white/10">
+<span class="font-mono text-[10px] text-zinc-400">© 2025 Sushovan Halder</span>
+<a class="font-mono text-[10px] text-zinc-300 hover:text-sensor-amber flex items-center gap-1 transition-colors" href="#hero">
+<span class="">Back to top</span>
+<span class="material-symbols-outlined text-[12px]">arrow_upward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- FIXED BOTTOM TAB BAR (5 Tabs: Home, Work, Skills, About, Contact) -->
+<nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-light/95 backdrop-blur-xl border-t border-border-subtle" data-active-classes="text-sensor-amber">
+<div class="h-16 max-w-[420px] mx-auto px-2 flex items-center justify-around">
+<!-- Tab 1: Home (Active) -->
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[52px] py-1 text-sensor-amber" href="#hero">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="font-mono text-[10px] mt-0.5 font-semibold">Home</span>
+</a>
+<!-- Tab 2: Work -->
+<a class="flex flex-col items-center justify-center min-w-[52px] py-1 text-text-muted hover:text-text-primary transition-colors" href="#projects">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span class="font-mono text-[10px] mt-0.5 font-medium">Work</span>
+</a>
+<!-- Tab 3: Skills -->
+<a class="flex flex-col items-center justify-center min-w-[52px] py-1 text-text-muted hover:text-text-primary transition-colors" href="#skills">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+<span class="font-mono text-[10px] mt-0.5 font-medium">Skills</span>
+</a>
+<!-- Tab 4: About -->
+<a class="flex flex-col items-center justify-center min-w-[52px] py-1 text-text-muted hover:text-text-primary transition-colors" href="#about">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span class="font-mono text-[10px] mt-0.5 font-medium">About</span>
+</a>
+<!-- Tab 5: Contact -->
+<a class="flex flex-col items-center justify-center min-w-[52px] py-1 text-text-muted hover:text-text-primary transition-colors" href="#contact">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+<span class="font-mono text-[10px] mt-0.5 font-medium">Contact</span>
+</a>
+</div>
+</nav>
+<!-- INTERACTIVE SCRIPTS -->
+<script>
+  // 1. Focus Accordion Toggle & Synchronized Hero Tag Trigger
+  function toggleFocus(idx) {
+    const total = 4;
+    for (let i = 1; i <= total; i++) {
+      const content = document.getElementById('fcontent-' + i);
+      const icon = document.getElementById('ficon-' + i);
+      const dot = document.getElementById('fdot-' + i);
+      const bar = document.getElementById('fbar-' + i);
+      const tag = document.getElementById('hero-tag-' + i);
+
+      if (i === idx) {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+          dot.classList.remove('bg-border-subtle');
+          dot.classList.add('bg-sensor-amber');
+          bar.classList.remove('bg-transparent');
+          bar.classList.add('bg-sensor-amber');
+          if (tag) tag.classList.add('tag-active');
+        } else {
+          content.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+          dot.classList.remove('bg-sensor-amber');
+          dot.classList.add('bg-border-subtle');
+          bar.classList.remove('bg-sensor-amber');
+          bar.classList.add('bg-transparent');
+          if (tag) tag.classList.remove('tag-active');
+        }
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+        dot.classList.remove('bg-sensor-amber');
+        dot.classList.add('bg-border-subtle');
+        bar.classList.remove('bg-sensor-amber');
+        bar.classList.add('bg-transparent');
+        if (tag) tag.classList.remove('tag-active');
+      }
+    }
+  }
+
+  // 2. Synchronize Tap on Hero Sculpture Tag directly with Focus Accordions
+  function highlightFocus(idx) {
+    toggleFocus(idx);
+    const card = document.getElementById('fcard-' + idx);
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // 3. Toolkit Accordion Toggle Logic
+  function toggleToolkit(idx) {
+    const total = 4;
+    for (let i = 1; i <= total; i++) {
+      const content = document.getElementById('tcontent-' + i);
+      const icon = document.getElementById('ticon-' + i);
+
+      if (i === idx) {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        } else {
+          content.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+        }
+      }
+    }
+  }
+
+  // 4. Toolkit Skill Chip Linkage Note
+  function showSkillNote(skill, linkage) {
+    const banner = document.getElementById('skill-note');
+    const text = document.getElementById('skill-note-text');
+    if (banner && text) {
+      text.innerHTML = '<strong class="text-text-primary">' + skill + ':</strong> ' + linkage;
+      banner.classList.remove('hidden');
+    }
+  }
+
+  function dismissSkillNote() {
+    const banner = document.getElementById('skill-note');
+    if (banner) banner.classList.add('hidden');
+  }
+
+  // 5. Carousel Scroll & Synchronized Indicator Dots
+  const pCarousel = document.getElementById('project-carousel');
+  const pDots = document.getElementById('carousel-dots');
+
+  function scrollCarousel(idx) {
+    if (!pCarousel) return;
+    const card = pCarousel.children[idx];
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  }
+
+  if (pCarousel && pDots) {
+    pCarousel.addEventListener('scroll', () => {
+      const cardWidth = pCarousel.children[0].offsetWidth + 12; // gap-3 = 12px
+      const activeIdx = Math.min(
+        pCarousel.children.length - 1, 
+        Math.max(0, Math.round(pCarousel.scrollLeft / cardWidth))
+      );
+      const dots = pDots.querySelectorAll('button');
+      dots.forEach((dot, index) => {
+        if (index === activeIdx) {
+          dot.className = 'w-6 h-1.5 rounded-full bg-sensor-amber transition-all';
+        } else {
+          dot.className = 'w-1.5 h-1.5 rounded-full bg-border-subtle transition-all';
+        }
+      });
+    }, { passive: true });
+  }
+</script>
+
+
+</body></html>

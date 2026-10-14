@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+.pnpm-store/
+.yarn/
+
+# build output
+.next/
+dist/
+build/
+out/
+coverage/
+
+# local env and secrets
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# local testing artifacts
+playwright-report/
+test-results/

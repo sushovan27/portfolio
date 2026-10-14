@@ -1,0 +1,1321 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Sushovan Halder — Portfolio &amp; Systems Lab</title>
+<!-- Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "surface-light": "#F3F2EF",
+            "surface-dark": "#111317",
+            "dark-elevated": "#1A1C21",
+            "text-primary": "#17181B",
+            "text-muted": "#777A80",
+            "border-subtle": "#D5D6D7",
+            "dark-border": "#282B32",
+            "sensor-amber": "#FF793D",
+            "amber-soft": "rgba(255, 121, 61, 0.12)"
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            sans: ["Inter", "sans-serif"],
+            mono: ["IBM Plex Mono", "monospace"],
+            editorial: ["Newsreader", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      background-color: #F3F2EF;
+      color: #17181B;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    ::selection {
+      background: #FF793D;
+      color: #FFFFFF;
+    }
+    .bust-blend {
+      mix-blend-mode: multiply;
+    }
+    .hud-line {
+      stroke-dasharray: 4 2;
+      animation: dash 20s linear infinite;
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: 100; }
+    }
+    /* Technical corner brackets */
+    .tech-bracket {
+      position: relative;
+    }
+    .tech-bracket::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px;
+      width: 6px; height: 6px;
+      border-top: 2px solid #FF793D;
+      border-left: 2px solid #FF793D;
+    }
+    .tech-bracket::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; right: -1px;
+      width: 6px; height: 6px;
+      border-bottom: 2px solid #FF793D;
+      border-right: 2px solid #FF793D;
+    }
+    .grid-lines-bg {
+      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(to right, rgba(213, 214, 215, 0.35) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(213, 214, 215, 0.35) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-surface-light text-text-primary antialiased selection:bg-sensor-amber selection:text-white">
+<!-- ================= TOP FLOATING NAVIGATION ================= -->
+<header class="fixed top-0 inset-x-0 z-50 pointer-events-none py-5 px-6 md:px-12">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between pointer-events-auto">
+<!-- Monogram Insignia -->
+<a class="group relative flex items-center gap-3 px-3.5 py-2 bg-white/80 backdrop-blur-md border border-border-subtle rounded-xl shadow-xs hover:border-text-primary transition-all duration-200" href="#hero">
+<div class="w-7 h-7 rounded bg-surface-dark text-white flex items-center justify-center font-display font-bold text-xs tracking-wider">
+          SH
+        </div>
+<div class="flex flex-col">
+<span class="font-mono text-[11px] font-semibold text-text-primary leading-tight">HALDER</span>
+<span class="font-mono text-[9px] text-text-muted leading-none">SYS.02 // ARCH</span>
+</div>
+</a>
+<!-- Central Floating Pill Navbar -->
+<nav class="flex items-center bg-white/90 backdrop-blur-md px-2 py-1.5 rounded-full border border-border-subtle shadow-sm">
+<a class="px-4 py-1.5 rounded-full text-xs font-mono font-medium text-surface-light bg-surface-dark transition-all duration-200" href="#hero">Home</a>
+<a class="px-4 py-1.5 rounded-full text-xs font-mono font-medium text-text-muted hover:text-text-primary hover:bg-neutral-100 transition-all duration-200" href="#experiments">Experiments</a>
+<a class="px-4 py-1.5 rounded-full text-xs font-mono font-medium text-text-muted hover:text-text-primary hover:bg-neutral-100 transition-all duration-200" href="#toolkit">Capability Map</a>
+<a class="px-4 py-1.5 rounded-full text-xs font-mono font-medium text-text-muted hover:text-text-primary hover:bg-neutral-100 transition-all duration-200" href="#about">Story</a>
+<a class="px-4 py-1.5 rounded-full text-xs font-mono font-medium text-text-muted hover:text-text-primary hover:bg-neutral-100 transition-all duration-200" href="#contact">Contact</a>
+</nav>
+<!-- Status Live Beacon -->
+<div class="hidden sm:flex items-center gap-2.5 px-3.5 py-2 bg-white/90 backdrop-blur-sm border border-border-subtle rounded-full text-xs font-mono text-text-primary shadow-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sensor-amber opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-sensor-amber"></span>
+</span>
+<span class="tracking-tight text-[11px] font-medium">Open to opportunities</span>
+</div>
+</div>
+</header>
+<!-- ================= 1. THE HERO (1440x900 Viewport Cinematic Signature Experience) ================= -->
+<section class="relative w-full h-[900px] max-h-[900px] overflow-hidden flex flex-col justify-between pt-24 pb-8 px-6 md:px-12 lg:px-16 border-b border-border-subtle grid-lines-bg" id="hero">
+<!-- Architectural Subtle Overlay Guides -->
+<div class="absolute inset-0 pointer-events-none max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-12 gap-6 z-0 opacity-25">
+<div class="col-span-4 border-r border-border-subtle h-full"></div>
+<div class="col-span-4 border-r border-border-subtle h-full"></div>
+<div class="col-span-4 h-full"></div>
+</div>
+<!-- MAIN 3-COLUMN HERO COMPOSITION -->
+<div class="relative z-10 max-w-[1440px] w-full mx-auto grid grid-cols-12 gap-4 lg:gap-6 h-full items-stretch">
+<!-- LEFT COLUMN: Monumental Typographic Block & Navigation Rail -->
+<div class="col-span-12 lg:col-span-5 flex flex-col justify-between h-full pr-2 z-20">
+<div>
+<!-- Micro Sub-label -->
+<div class="inline-flex items-center gap-2 mb-4 px-2.5 py-1 rounded bg-white/80 border border-border-subtle shadow-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="font-mono text-[11px] text-text-muted tracking-wider uppercase font-medium">Independent Builder • Systems &amp; Software</span>
+</div>
+<!-- Monumental Headline interacting with sculpture depth -->
+<div class="relative">
+<h1 class="font-display text-[68px] xl:text-[84px] leading-[0.90] font-bold tracking-tight text-text-primary mb-4 select-none">
+              Sushovan<br>
+              Halder<span class="text-sensor-amber">.</span>
+</h1>
+</div>
+<!-- Supporting Manifesto -->
+<p class="font-display text-lg md:text-xl text-text-primary font-medium leading-snug mb-3 max-w-md">
+            I build at the intersection of software, AI, and security.
+          </p>
+<p class="font-sans text-xs md:text-sm text-text-muted leading-relaxed max-w-md mb-6">
+            Translating low-level system experiments and local artificial intelligence workflows into robust, beautiful digital experiences.
+          </p>
+<!-- Buttons with Technical Bracket Accents -->
+<div class="flex items-center gap-3.5 pt-1">
+<a class="tech-bracket group inline-flex items-center gap-2.5 px-6 py-3 bg-[#17181B] text-white rounded-sm font-mono text-xs font-semibold tracking-wider uppercase transition-all duration-200 hover:bg-black hover:shadow-lg" href="#experiments">
+<span class="">EXPLORE PROJECTS</span>
+<span class="material-symbols-outlined text-sensor-amber text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+<a class="inline-flex items-center px-5 py-3 border border-border-subtle bg-white/80 hover:bg-white text-text-primary rounded-sm font-mono text-xs font-semibold tracking-wider uppercase transition-all duration-200 hover:border-text-primary" href="#contact">
+              GET IN TOUCH
+            </a>
+</div>
+</div>
+<!-- Hero Bottom: Synchronized Selected Project Rail -->
+<div class="pt-4 mt-auto">
+<div class="flex items-center justify-between pb-2 mb-1.5 border-b border-border-subtle/80">
+<span class="font-mono text-[10px] text-text-muted uppercase tracking-widest font-semibold flex items-center gap-1.5">
+<span class="w-1 h-1 bg-sensor-amber inline-block"></span>
+              Selected Project Index
+            </span>
+<span class="font-mono text-[10px] text-text-muted">4 Active Units</span>
+</div>
+<div class="space-y-1.5" id="hero-project-list">
+<!-- Project 1 (Active) -->
+<button class="hero-project-btn w-full text-left p-2.5 rounded border-l-[3px] border-l-sensor-amber bg-white shadow-2xs flex items-center justify-between transition-all duration-150" onclick="switchHeroFocus('kernel', this)" type="button">
+<div>
+<span class="font-display font-semibold text-xs md:text-sm text-text-primary block">Kernel Log</span>
+<span class="font-mono text-[10px] text-text-muted">Editorial tech publishing &amp; low-level dev notes</span>
+</div>
+<span class="material-symbols-outlined text-sensor-amber text-[18px]">arrow_forward</span>
+</button>
+<!-- Project 2 -->
+<button class="hero-project-btn w-full text-left p-2.5 rounded border-l-[3px] border-l-transparent hover:bg-white/70 flex items-center justify-between transition-all duration-150" onclick="switchHeroFocus('honeychain', this)" type="button">
+<div>
+<span class="font-display font-medium text-xs md:text-sm text-text-primary block">HoneyChain — OriginHive</span>
+<span class="font-mono text-[10px] text-text-muted">Supply chain traceability &amp; smart beekeeping</span>
+</div>
+<span class="font-mono text-[10px] text-text-muted uppercase">View</span>
+</button>
+<!-- Project 3 -->
+<button class="hero-project-btn w-full text-left p-2.5 rounded border-l-[3px] border-l-transparent hover:bg-white/70 flex items-center justify-between transition-all duration-150" onclick="switchHeroFocus('sldungeons', this)" type="button">
+<div>
+<span class="font-display font-medium text-xs md:text-sm text-text-primary block">SLDungeons</span>
+<span class="font-mono text-[10px] text-text-muted">Procedural solo leveling dungeon plugin engine</span>
+</div>
+<span class="font-mono text-[10px] text-text-muted uppercase">View</span>
+</button>
+<!-- Project 4 -->
+<button class="hero-project-btn w-full text-left p-2.5 rounded border-l-[3px] border-l-transparent hover:bg-white/70 flex items-center justify-between transition-all duration-150" onclick="switchHeroFocus('market', this)" type="button">
+<div>
+<span class="font-display font-medium text-xs md:text-sm text-text-primary block">Market Dashboard</span>
+<span class="font-mono text-[10px] text-text-muted">Real-time reactive visual telemetry &amp; charts</span>
+</div>
+<span class="font-mono text-[10px] text-text-muted uppercase">View</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CENTER COLUMN: Centered 3D Cybernetic Bust Sculpture & HUD Crosshairs -->
+<div class="col-span-12 lg:col-span-4 relative flex flex-col justify-end items-center h-full select-none" id="bust-anchor">
+<!-- Floor Realistic Soft Contact Shadow -->
+<div class="absolute bottom-2 w-[380px] h-10 rounded-full pointer-events-none" style="background: radial-gradient(60% 50%, rgba(17, 19, 23, 0.45) 0%, rgba(23, 24, 27, 0.2) 45%, rgba(23, 24, 27, 0.05) 65%, transparent 80%); filter: blur(6px); transform: translateY(6px) scale(1.05); transition: transform 0.2s ease-out;"></div>
+<!-- 3D Cybernetic Bust (Bust image seamlessly blended with #F3F2EF) -->
+<div class="relative w-full max-w-[420px] flex items-end justify-center pointer-events-auto" style="perspective: 1000px; transform-style: preserve-3d;">
+<img id="cyber-bust" alt="Cybernetic robotics sculpture anchor" class="bust-blend block w-full max-w-full h-[620px] object-cover object-bottom transition-transform duration-700 ease-out hover:scale-[1.01] pointer-events-auto select-none" src="https://lh3.googleusercontent.com/aida/AEtjO1WjmrKUxa17EJen43zr36zLfditT1jHuqu5Vw7wD-kFKV93HIDrV9x5xR8mqR-xlk4Abz_ltxsj4-T3cBzs6jCbuG6hjbsV0efEM0FHLs06iprhvBHG4pjrIwKWfj-iP32UkjyXIyb7dLkF4T1wHXNO2FdD4fHcR0zlhcW_OGxCM0CKe623Geum8H_0caU8RaiEFRAmiobNeqNnzA7oY1mk0HH3xW-9exc-WElgvV5XLUU594Sco3Y9SxY" style="mix-blend-mode: multiply; transform-style: preserve-3d; filter: drop-shadow(rgba(0, 0, 0, 0.18) 0px 24px 32px); will-change: transform; background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; outline: none; box-shadow: none;">
+</div>
+<!-- Cybernetic Focus System: 4 Floating HUD Tags with Interactive Crosshairs -->
+<!-- 1. AI SYSTEMS (Top-Right) -->
+<div class="hud-node absolute top-12 -right-4 pointer-events-auto cursor-pointer group" id="hud-ai" onclick="triggerHudFocus('ai')">
+<div class="flex items-center gap-2 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded border border-border-subtle shadow-sm group-hover:border-sensor-amber group-hover:shadow-md transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber animate-pulse"></span>
+<span class="font-mono text-[10px] font-semibold tracking-wider text-text-primary uppercase">AI SYSTEMS</span>
+<span class="font-mono text-[9px] text-text-muted">#01</span>
+</div>
+<svg class="absolute -left-10 top-3 w-10 h-6 pointer-events-none overflow-visible">
+<polyline class="hud-line" fill="none" points="40,3 10,3 0,16" stroke="#FF793D" stroke-width="1.2"></polyline>
+<circle cx="0" cy="16" fill="#FF793D" r="2.5"></circle>
+</svg>
+</div>
+<!-- 2. WEB ENGINEERING (Mid-Left) -->
+<div class="hud-node absolute top-48 -left-8 pointer-events-auto cursor-pointer group" id="hud-web" onclick="triggerHudFocus('web')">
+<div class="flex items-center gap-2 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded border border-border-subtle shadow-sm group-hover:border-sensor-amber group-hover:shadow-md transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-dark group-hover:bg-sensor-amber transition-colors"></span>
+<span class="font-mono text-[10px] font-semibold tracking-wider text-text-primary uppercase">WEB ENGINEERING</span>
+<span class="font-mono text-[9px] text-text-muted">#02</span>
+</div>
+<svg class="absolute -right-10 top-3 w-10 h-6 pointer-events-none overflow-visible">
+<polyline class="hud-line" fill="none" points="0,3 30,3 40,16" stroke="#777A80" stroke-width="1.2"></polyline>
+<circle cx="40" cy="16" fill="#777A80" r="2.5"></circle>
+</svg>
+</div>
+<!-- 3. CYBERSECURITY (Lower-Right) -->
+<div class="hud-node absolute bottom-36 -right-6 pointer-events-auto cursor-pointer group" id="hud-sec" onclick="triggerHudFocus('sec')">
+<div class="flex items-center gap-2 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded border border-sensor-amber/60 shadow-sm group-hover:border-sensor-amber group-hover:shadow-md transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="font-mono text-[10px] font-semibold tracking-wider text-text-primary uppercase">CYBERSECURITY</span>
+<span class="font-mono text-[9px] text-text-muted">#03</span>
+</div>
+<svg class="absolute -left-12 top-3 w-12 h-6 pointer-events-none overflow-visible">
+<polyline class="hud-line" fill="none" points="48,3 15,3 0,-8" stroke="#FF793D" stroke-width="1.2"></polyline>
+<circle cx="0" cy="-8" fill="#FF793D" r="2.5"></circle>
+</svg>
+</div>
+<!-- 4. LINUX & SYSTEMS (Lower-Left) -->
+<div class="hud-node absolute bottom-20 -left-6 pointer-events-auto cursor-pointer group" id="hud-sys" onclick="triggerHudFocus('sys')">
+<div class="flex items-center gap-2 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded border border-border-subtle shadow-sm group-hover:border-sensor-amber group-hover:shadow-md transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-dark group-hover:bg-sensor-amber transition-colors"></span>
+<span class="font-mono text-[10px] font-semibold tracking-wider text-text-primary uppercase">LINUX &amp; SYSTEMS</span>
+<span class="font-mono text-[9px] text-text-muted">#04</span>
+</div>
+<svg class="absolute -right-10 top-3 w-10 h-6 pointer-events-none overflow-visible">
+<polyline class="hud-line" fill="none" points="0,3 25,3 36,-10" stroke="#777A80" stroke-width="1.2"></polyline>
+<circle cx="36" cy="-10" fill="#777A80" r="2.5"></circle>
+</svg>
+</div>
+</div>
+<!-- RIGHT COLUMN: Telemetry Strip & Synchronized Project Focal Inspector -->
+<div class="col-span-12 lg:col-span-3 flex flex-col justify-between h-full pl-2 z-20">
+<!-- Architectural Telemetry Strip -->
+<div class="w-full bg-surface-dark text-white rounded-xl p-5 border border-dark-border shadow-md">
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-dark-border/80">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-sensor-amber"></span>
+<span class="font-mono text-[10px] tracking-widest uppercase text-text-muted font-semibold">Active Telemetry</span>
+</div>
+<span class="font-mono text-[10px] text-zinc-400" id="telemetry-node">NODE // RUNTIME</span>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-xs font-mono">
+<span class="text-zinc-400">Environment</span>
+<span class="text-zinc-100 font-medium">Linux 6.8 • Podman</span>
+</div>
+<div class="flex justify-between items-center text-xs font-mono">
+<span class="text-zinc-400">Local Inference</span>
+<span class="text-sensor-amber font-medium">Ollama Qwen2.5</span>
+</div>
+<div class="flex justify-between items-center text-xs font-mono">
+<span class="text-zinc-400">Protocol Focus</span>
+<span class="text-zinc-100">Zero-Trust • REST</span>
+</div>
+<div class="flex justify-between items-center text-xs font-mono pt-1 border-t border-dark-border/60">
+<span class="text-zinc-400">Architecture</span>
+<span class="text-emerald-400 text-[11px] font-semibold" id="telemetry-status">● VERIFIED ONLINE</span>
+</div>
+</div>
+</div>
+<!-- Architectural Project Preview Slot linked to Bottom Rail -->
+<div class="w-full bg-white rounded-xl p-5 border border-border-subtle shadow-xs flex flex-col justify-between mt-3" id="hero-preview-card">
+<div>
+<div class="flex items-center justify-between pb-2.5 mb-2.5 border-b border-border-subtle/80">
+<span class="font-mono text-[10px] tracking-wider uppercase text-text-muted" id="hero-preview-cat">PUBLISHING SPEC</span>
+<span class="font-mono text-[10px] font-semibold text-sensor-amber" id="hero-preview-tag">01 // BESPOKE</span>
+</div>
+<h3 class="font-display font-bold text-base text-text-primary mb-1.5" id="hero-preview-title">
+              Kernel Log
+            </h3>
+<p class="text-xs text-text-muted leading-relaxed mb-3.5" id="hero-preview-desc">
+              Personal engineering publication exploring low-level architecture, Linux container boundaries, and practical web tooling.
+            </p>
+<div class="flex flex-wrap gap-1.5 mb-3" id="hero-preview-chips">
+<span class="px-2 py-0.5 rounded bg-surface-light border border-border-subtle font-mono text-[10px]">Next.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-light border border-border-subtle font-mono text-[10px]">Markdown</span>
+<span class="px-2 py-0.5 rounded bg-surface-light border border-border-subtle font-mono text-[10px]">Linux</span>
+</div>
+</div>
+<a class="group inline-flex items-center justify-between text-xs font-mono font-medium text-text-primary hover:text-sensor-amber pt-2.5 border-t border-border-subtle/70 transition-colors" href="#experiments" id="hero-preview-cta">
+<span class="">Inspect in Experiments</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 2. SELECTED EXPERIMENTS (Asymmetric Technical Showcase) ================= -->
+<section class="py-24 px-6 md:px-12 lg:px-16 max-w-[1440px] mx-auto border-b border-border-subtle" id="experiments">
+<!-- Section Header & Switcher Tabs -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
+<div>
+<div class="inline-flex items-center gap-2 mb-2 font-mono text-xs text-text-muted uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="">02 // Asymmetric Engineering Showcase</span>
+</div>
+<h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
+          Selected Experiments<span class="text-sensor-amber">.</span>
+</h2>
+<p class="text-sm md:text-base text-text-muted mt-2 max-w-2xl">
+          Four distinct engineering projects built from scratch. Switch tabs to inspect technical architectures, verification status, and implementation details.
+        </p>
+</div>
+<!-- Editorial Switcher Tabs -->
+<div class="flex flex-wrap items-center gap-2 bg-white p-1.5 rounded-xl border border-border-subtle shadow-xs font-mono text-xs">
+<button class="exp-tab-btn px-4 py-2 rounded-lg font-medium text-white bg-surface-dark transition-all duration-150" onclick="switchExperiment('kernel', this)">
+          01. Kernel Log
+        </button>
+<button class="exp-tab-btn px-4 py-2 rounded-lg font-medium text-text-muted hover:text-text-primary hover:bg-neutral-100 transition-all duration-150" onclick="switchExperiment('honeychain', this)">
+          02. HoneyChain
+        </button>
+<button class="exp-tab-btn px-4 py-2 rounded-lg font-medium text-text-muted hover:text-text-primary hover:bg-neutral-100 transition-all duration-150" onclick="switchExperiment('sldungeons', this)">
+          03. SLDungeons
+        </button>
+<button class="exp-tab-btn px-4 py-2 rounded-lg font-medium text-text-muted hover:text-text-primary hover:bg-neutral-100 transition-all duration-150" onclick="switchExperiment('market', this)">
+          04. Market Dashboard
+        </button>
+</div>
+</div>
+<!-- DYNAMIC SHOWCASE CONTAINER -->
+<div class="relative bg-white rounded-2xl border border-border-subtle shadow-sm overflow-hidden p-6 md:p-10 transition-all" id="experiment-stage">
+<!-- SHOWCASE 1: KERNEL LOG (Typographic Editorial Tech Publication) -->
+<div class="exp-panel grid grid-cols-12 gap-8 items-start" id="panel-kernel">
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-1 rounded bg-amber-soft border border-sensor-amber/30 text-sensor-amber font-mono text-xs font-semibold uppercase">Technical Publishing</span>
+<span class="font-mono text-xs text-text-muted">Live Prototype</span>
+</div>
+<div>
+<h3 class="font-display text-2xl md:text-3xl font-bold text-text-primary mb-3">Kernel Log</h3>
+<p class="text-sm md:text-base text-text-muted leading-relaxed">
+              An independent technical publication and markdown document engine built to document low-level systems discoveries, compiler explorations, and practical Linux architecture without content fluff.
+            </p>
+</div>
+<div class="space-y-3 pt-2 border-t border-border-subtle/80 text-xs">
+<div>
+<span class="font-mono text-text-muted uppercase tracking-wider text-[11px] block mb-1">Problem Statement</span>
+<p class="text-text-primary">Existing blogging platforms are weighed down by heavy tracking scripts and poor code readability for deep technical walk-throughs.</p>
+</div>
+<div>
+<span class="font-mono text-text-muted uppercase tracking-wider text-[11px] block mb-1">What Was Built</span>
+<p class="text-text-primary">A clean AST-based markdown parsing pipeline with custom typography tokens, zero third-party telemetry, and instant server-side page builds.</p>
+</div>
+</div>
+<div class="pt-4">
+<span class="font-mono text-[11px] text-text-muted uppercase tracking-wider block mb-2 font-semibold">Verified Stack</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Next.js 14</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">TypeScript</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">MDX / Remark</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Linux Deploy</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-dark text-white rounded font-mono text-xs font-medium hover:bg-black transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="">View Source Repo</span>
+<span class="material-symbols-outlined text-[15px]">code</span>
+</a>
+<a class="inline-flex items-center gap-1.5 text-xs font-mono text-text-primary hover:text-sensor-amber transition-colors font-semibold" href="#hero">
+<span class="">Read Spec Post</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Editorial Publication Preview Right Deck -->
+<div class="col-span-12 lg:col-span-7 bg-[#FAF9F6] border border-border-subtle rounded-xl p-6 md:p-8 font-sans">
+<div class="flex items-center justify-between pb-4 mb-6 border-b border-border-subtle font-mono text-xs text-text-muted">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              kernellog.sushovan.dev/posts/memory-isolation
+            </span>
+<span class="">PUBLISHED • 6 MIN READ</span>
+</div>
+<article class="space-y-4">
+<span class="font-mono text-xs text-sensor-amber font-semibold uppercase tracking-wider">SYSTEMS ARCHITECTURE • ENTRY 04</span>
+<h4 class="font-editorial italic text-2xl md:text-3xl text-text-primary leading-tight">
+              Investigating process memory boundaries inside unprivileged rootless namespaces
+            </h4>
+<p class="text-xs md:text-sm text-text-muted leading-relaxed">
+              When orchestrating worker processes inside lightweight unprivileged containers, conventional kernel cgroups enforce quotas but do not automatically mitigate speculative side-channels without deliberate seccomp filtering...
+            </p>
+<!-- Monospace Code Excerpt -->
+<div class="bg-surface-dark text-zinc-300 p-4 rounded-lg font-mono text-xs overflow-x-auto border border-dark-border">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-dark-border text-zinc-500 text-[10px]">
+<span class="">ns_inspect.c — user namespace check</span>
+<span class="">GCC 13.2</span>
+</div>
+<pre class="leading-relaxed"><code>if (unshare(CLONE_NEWUSER | CLONE_NEWPID) == -1) {
+    perror("[-] Namespace allocation failed");
+    exit(EXIT_FAILURE);
+}
+printf("[+] Namespace initialized. UID map: %d -&gt; %d\n", getuid(), target_uid);</code></pre>
+</div>
+<div class="flex items-center justify-between pt-3 text-xs font-mono text-text-muted">
+<span class="">TAGS: #cgroups #linux #security #kernel</span>
+<span class="text-text-primary font-medium hover:underline cursor-pointer">Continue reading →</span>
+</div>
+</article>
+</div>
+</div>
+<!-- SHOWCASE 2: HONEYCHAIN (Blockchain Supply Chain & Smart Beekeeping) -->
+<div class="exp-panel hidden grid grid-cols-12 gap-8 items-start" id="panel-honeychain">
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-1 rounded bg-amber-soft border border-sensor-amber/30 text-sensor-amber font-mono text-xs font-semibold uppercase">Hackathon Spec</span>
+<span class="font-mono text-xs text-text-muted">Verified Concept</span>
+</div>
+<div>
+<h3 class="font-display text-2xl md:text-3xl font-bold text-text-primary mb-3">HoneyChain — OriginHive</h3>
+<p class="text-sm md:text-base text-text-muted leading-relaxed">
+              An IoT-assisted provenance protocol designed to verify organic honey harvesting batch telemetry, prevent supply adulteration, and connect apiary sensors directly with verifiable smart contracts.
+            </p>
+</div>
+<div class="space-y-3 pt-2 border-t border-border-subtle/80 text-xs">
+<div>
+<span class="font-mono text-text-muted uppercase tracking-wider text-[11px] block mb-1">Problem Statement</span>
+<p class="text-text-primary">Commercial honey suffers up to 40% adulteration with high-fructose syrups while legitimate beekeepers lack tamper-proof harvest verification.</p>
+</div>
+<div>
+<span class="font-mono text-text-muted uppercase tracking-wider text-[11px] block mb-1">What Was Built</span>
+<p class="text-text-primary">Smart hive batch hashing with ambient temperature/humidity telemetry logging, cryptographic QR verification seals, and decentralized ledger checks.</p>
+</div>
+</div>
+<div class="pt-4">
+<span class="font-mono text-[11px] text-text-muted uppercase tracking-wider block mb-2 font-semibold">Verified Stack</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Solidity</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Ethers.js</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">React 18</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">IoT Telemetry</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Python Daemon</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-dark text-white rounded font-mono text-xs font-medium hover:bg-black transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="">View Smart Contract</span>
+<span class="material-symbols-outlined text-[15px]">terminal</span>
+</a>
+</div>
+</div>
+<!-- Supply-Chain Flow Visualizer -->
+<div class="col-span-12 lg:col-span-7 bg-surface-dark text-white border border-dark-border rounded-xl p-6 md:p-8 font-mono">
+<div class="flex items-center justify-between pb-4 mb-6 border-b border-dark-border text-xs text-zinc-400">
+<span class="text-sensor-amber font-semibold">LEDGER PIPELINE // VERIFIED STATE</span>
+<span class="">BATCH_ID #8841-ORG</span>
+</div>
+<!-- Traceability Node Flow -->
+<div class="space-y-4">
+<div class="p-3.5 rounded bg-dark-elevated border border-dark-border flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-sensor-amber text-sm font-bold">01</span>
+<div>
+<span class="text-xs text-zinc-200 block font-semibold">Hive Telemetry Recorded</span>
+<span class="text-[10px] text-zinc-400">Temp: 34.2°C • Humidity: 58% • Geo: Lat 22.57, Long 88.36</span>
+</div>
+</div>
+<span class="text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2 py-0.5 rounded">AUTHENTIC</span>
+</div>
+<div class="p-3.5 rounded bg-dark-elevated border border-dark-border flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-sensor-amber text-sm font-bold">02</span>
+<div>
+<span class="text-xs text-zinc-200 block font-semibold">Merkle Root Sealed to Block #184920</span>
+<span class="text-[10px] text-zinc-400">SHA-256: 0x9b7a...3ef1 • Signer: Apiary_Key_04</span>
+</div>
+</div>
+<span class="text-[10px] text-zinc-300 bg-neutral-800 px-2 py-0.5 rounded">0.0012 ETH GAS</span>
+</div>
+<div class="p-3.5 rounded bg-dark-elevated border border-dark-border flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded bg-neutral-800 flex items-center justify-center text-sensor-amber text-sm font-bold">03</span>
+<div>
+<span class="text-xs text-zinc-200 block font-semibold">Consumer End Validation via QR</span>
+<span class="text-[10px] text-zinc-400">Pollen composition cert matched • Zero adulterants detected</span>
+</div>
+</div>
+<span class="text-[10px] text-sensor-amber bg-amber-soft border border-sensor-amber/30 px-2 py-0.5 rounded">VERIFIED</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-dark-border flex justify-between items-center text-[11px] text-zinc-400">
+<span class="">Consensus: Proof-of-Authority testbed</span>
+<span class="text-zinc-200">Hackathon Submission Spec</span>
+</div>
+</div>
+</div>
+<!-- SHOWCASE 3: SLDUNGEONS (Procedural Solo Leveling Dungeon Engine) -->
+<div class="exp-panel hidden grid grid-cols-12 gap-8 items-start" id="panel-sldungeons">
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-1 rounded bg-amber-soft border border-sensor-amber/30 text-sensor-amber font-mono text-xs font-semibold uppercase">Systems &amp; Gaming</span>
+<span class="font-mono text-xs text-text-muted">Production Plugin</span>
+</div>
+<div>
+<h3 class="font-display text-2xl md:text-3xl font-bold text-text-primary mb-3">SLDungeons</h3>
+<p class="text-sm md:text-base text-text-muted leading-relaxed">
+              A high-concurrency Minecraft server engine plugin inspired by the Solo Leveling dungeon gate mechanics. Features isolated ephemeral dungeon world instances, wave state machines, and dynamic loot scaling.
+            </p>
+</div>
+<div class="space-y-3 pt-2 border-t border-border-subtle/80 text-xs">
+<div>
+<span class="font-mono text-text-muted uppercase tracking-wider text-[11px] block mb-1">Problem Statement</span>
+<p class="text-text-primary">Multiplayer RPG dungeon plugins frequently cause server tick drops (TPS lag) due to poor entity cleanup and synchronous map loading.</p>
+</div>
+<div>
+<span class="font-mono text-text-muted uppercase tracking-wider text-[11px] block mb-1">What Was Built</span>
+<p class="text-text-primary">Asynchronous chunk pre-generation, garbage-collected temporary world instances, and thread-safe custom entity combat algorithms.</p>
+</div>
+</div>
+<div class="pt-4">
+<span class="font-mono text-[11px] text-text-muted uppercase tracking-wider block mb-2 font-semibold">Verified Stack</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Java 21</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Paper / Spigot API</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">NBT Serialization</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Async WorldEdit</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Linux Server</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-dark text-white rounded font-mono text-xs font-medium hover:bg-black transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="">View Plugin Architecture</span>
+<span class="material-symbols-outlined text-[15px]">sports_esports</span>
+</a>
+</div>
+</div>
+<!-- Dungeon Terminal & Procedural Grid Mockup -->
+<div class="col-span-12 lg:col-span-7 bg-[#0E1013] text-zinc-300 border border-dark-border rounded-xl p-6 font-mono text-xs">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-dark-border text-zinc-500">
+<span class="text-sensor-amber">INSTANCE // GATE_RANK_S_001</span>
+<span class="">TPS: 20.0 (STABLE)</span>
+</div>
+<div class="bg-black/60 p-4 rounded border border-dark-border/80 mb-4">
+<div class="text-zinc-500 mb-1"># dungeon_manifest.yml</div>
+<pre class="text-zinc-300"><code>gate_tier: "RED_GATE"
+biome_override: "GLACIAL_DEPTHS"
+max_party_size: 4
+mob_scaling_formula: "base_hp * (1.25 ^ floor_level)"
+boss_entity: "IGRIS_KNIGHT_COMMANDER"
+auto_destruct_on_clear: true
+timeout_minutes: 45</code></pre>
+</div>
+<!-- Procedural Map Grid -->
+<div class="border border-dark-border rounded p-3 bg-neutral-900/40">
+<span class="text-[10px] text-zinc-500 uppercase block mb-2">Procedural Room Allocator Matrix</span>
+<div class="grid grid-cols-6 gap-2 text-center text-[10px]">
+<div class="p-2 rounded bg-neutral-800 text-zinc-400">ENTRY [0,0]</div>
+<div class="p-2 rounded bg-neutral-800 text-zinc-400">CORRIDOR</div>
+<div class="p-2 rounded bg-sensor-amber/20 border border-sensor-amber/50 text-sensor-amber">CHEST ROOM</div>
+<div class="p-2 rounded bg-neutral-800 text-zinc-400">CORRIDOR</div>
+<div class="p-2 rounded bg-neutral-800 text-zinc-400">MOB ARENA</div>
+<div class="p-2 rounded bg-red-950/60 border border-red-500/50 text-red-400 font-bold">BOSS GATE</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SHOWCASE 4: MARKET DASHBOARD (Precision Financial Telemetry) -->
+<div class="exp-panel hidden grid grid-cols-12 gap-8 items-start" id="panel-market">
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-1 rounded bg-amber-soft border border-sensor-amber/30 text-sensor-amber font-mono text-xs font-semibold uppercase">Financial Frontend</span>
+<span class="font-mono text-xs text-text-muted">Interactive Client</span>
+</div>
+<div>
+<h3 class="font-display text-2xl md:text-3xl font-bold text-text-primary mb-3">Market Dashboard</h3>
+<p class="text-sm md:text-base text-text-muted leading-relaxed">
+              A high-precision financial charting web prototype inspired by interactive trading terminals. Focused on low-latency DOM re-renders, canvas curve drawing, and synchronized order-book feeds.
+            </p>
+</div>
+<div class="space-y-3 pt-2 border-t border-border-subtle/80 text-xs">
+<div>
+<span class="font-mono text-text-muted uppercase tracking-wider text-[11px] block mb-1">Problem Statement</span>
+<p class="text-text-primary">Standard web charts drop frame rates rapidly when handling high-frequency websocket tick streams and real-time order-book depth calculation.</p>
+</div>
+<div>
+<span class="font-mono text-text-muted uppercase tracking-wider text-[11px] block mb-1">What Was Built</span>
+<p class="text-text-primary">Offscreen canvas rendering engine with bespoke SVG candlestick and depth curve modules without heavy monolithic third-party charting bloat.</p>
+</div>
+</div>
+<div class="pt-4">
+<span class="font-mono text-[11px] text-text-muted uppercase tracking-wider block mb-2 font-semibold">Verified Stack</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">React 18</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">Vite</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">HTML5 Canvas</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">WebSockets</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light border border-border-subtle text-xs font-mono text-text-primary">TypeScript</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-dark text-white rounded font-mono text-xs font-medium hover:bg-black transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="">View Client Source</span>
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+</a>
+</div>
+</div>
+<!-- Financial Chart Visualizer Right Deck -->
+<div class="col-span-12 lg:col-span-7 bg-[#14161A] text-white border border-dark-border rounded-xl p-6 font-mono">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-dark-border text-xs">
+<div class="flex items-center gap-3">
+<span class="font-bold text-zinc-200">BTC / USD • PERP</span>
+<span class="text-emerald-400 font-semibold">$64,281.50</span>
+<span class="text-[10px] text-emerald-400 bg-emerald-950/60 px-1.5 py-0.5 rounded">+2.41%</span>
+</div>
+<span class="text-zinc-500 text-[11px]">1m INTERVAL</span>
+</div>
+<!-- Candlestick & Volume SVG Chart -->
+<div class="w-full h-44 relative bg-black/40 rounded border border-dark-border/60 p-2 flex items-end">
+<!-- Simulated crisp SVG Candlesticks -->
+<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 300 120">
+<!-- Grid lines -->
+<line stroke="#2A2D33" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="300" y1="30" y2="30"></line>
+<line stroke="#2A2D33" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="300" y1="70" y2="70"></line>
+<line stroke="#2A2D33" stroke-dasharray="2,2" stroke-width="0.5" x1="0" x2="300" y1="100" y2="100"></line>
+<!-- Candlestick sequence -->
+<g stroke="#10b981" stroke-width="1">
+<line x1="20" x2="20" y1="80" y2="40"></line>
+<rect fill="#10b981" height="24" width="8" x="16" y="50"></rect>
+<line x1="50" x2="50" y1="65" y2="30"></line>
+<rect fill="#10b981" height="20" width="8" x="46" y="38"></rect>
+</g>
+<g stroke="#ef4444" stroke-width="1">
+<line x1="80" x2="80" y1="90" y2="35"></line>
+<rect fill="#ef4444" height="28" width="8" x="76" y="45"></rect>
+</g>
+<g stroke="#10b981" stroke-width="1">
+<line x1="110" x2="110" y1="70" y2="25"></line>
+<rect fill="#10b981" height="30" width="8" x="106" y="35"></rect>
+<line x1="140" x2="140" y1="60" y2="20"></line>
+<rect fill="#10b981" height="22" width="8" x="136" y="28"></rect>
+<line x1="170" x2="170" y1="50" y2="15"></line>
+<rect fill="#10b981" height="18" width="8" x="166" y="22"></rect>
+</g>
+<g stroke="#ef4444" stroke-width="1">
+<line x1="200" x2="200" y1="55" y2="20"></line>
+<rect fill="#ef4444" height="15" width="8" x="196" y="30"></rect>
+</g>
+<g stroke="#FF793D" stroke-width="1">
+<line x1="230" x2="230" y1="45" y2="10"></line>
+<rect fill="#FF793D" height="26" width="8" x="226" y="16"></rect>
+<line x1="260" x2="260" y1="35" y2="8"></line>
+<rect fill="#FF793D" height="18" width="8" x="256" y="12"></rect>
+</g>
+</svg>
+</div>
+<!-- Order Book Snapshot Data -->
+<div class="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-dark-border text-[11px]">
+<div>
+<span class="text-zinc-500 uppercase block mb-1">Depth Bid Density</span>
+<div class="flex justify-between text-zinc-300">
+<span class="">$64,280.00</span>
+<span class="text-emerald-400 font-semibold">1.482 BTC</span>
+</div>
+</div>
+<div>
+<span class="text-zinc-500 uppercase block mb-1">Depth Ask Density</span>
+<div class="flex justify-between text-zinc-300">
+<span class="">$64,284.50</span>
+<span class="text-red-400 font-semibold">0.941 BTC</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 3. MY TOOLKIT (Interactive Evidence-Based Capability Map) ================= -->
+<section class="py-24 px-6 md:px-12 lg:px-16 max-w-[1440px] mx-auto border-b border-border-subtle" id="toolkit">
+<!-- Header & Interactive Status Legend -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="inline-flex items-center gap-2 mb-2 font-mono text-xs text-text-muted uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="">03 // Interactive Evidence-Based Capability Map</span>
+</div>
+<h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
+          My Toolkit<span class="text-sensor-amber">.</span>
+</h2>
+<p class="text-sm md:text-base text-text-muted mt-2 max-w-xl">
+          Honest overview of verified technologies. Select any skill chip below to inspect usage context and its cross-referenced active project.
+        </p>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-4 bg-white px-4 py-2.5 rounded-xl border border-border-subtle text-xs font-mono shadow-xs">
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded bg-surface-dark border border-surface-dark inline-block"></span>
+<span class="text-text-primary font-medium">Used in project</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3.5 h-3.5 rounded border border-dashed border-text-muted bg-transparent inline-block"></span>
+<span class="text-text-muted">Currently learning</span>
+</div>
+</div>
+</div>
+<!-- 4 Domains Capability Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Domain 1: Frontend & Web -->
+<div class="bg-white rounded-xl p-5 border border-border-subtle shadow-xs flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-border-subtle/80">
+<h3 class="font-display font-semibold text-base text-text-primary">Frontend &amp; Web</h3>
+<span class="material-symbols-outlined text-text-muted text-[18px]">laptop_chromebook</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Next.js', 'Core framework for Kernel Log and this portfolio. Used for fast SSR, static generation, and strict TypeScript integration.', 'Kernel Log &amp; Web Specs')">
+              Next.js
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Vite', 'Primary bundler for rapid prototyping and low-latency reactive applications.', 'Market Dashboard')">
+              Vite
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('TypeScript', 'Strict typings across data pipelines, component contracts, and server models.', 'Kernel Log &amp; Market Dashboard')">
+              TypeScript
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Tailwind CSS', 'Preferred utility system for scalable, modular, zero-runtime UI design.', 'All Projects')">
+              Tailwind CSS
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('React', 'Component hierarchy, state reduction, and custom reactive hooks.', 'HoneyChain &amp; Market Dashboard')">
+              React
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('HTML / CSS', 'Semantic markup, accessible tree structures, and bespoke micro-interactions.', 'All Projects')">
+              HTML / CSS
+            </button>
+</div>
+</div>
+</div>
+<!-- Domain 2: AI & Automation -->
+<div class="bg-white rounded-xl p-5 border border-border-subtle shadow-xs flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-border-subtle/80">
+<h3 class="font-display font-semibold text-base text-text-primary">AI &amp; Automation</h3>
+<span class="material-symbols-outlined text-text-muted text-[18px]">neurology</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Ollama', 'Local inference runner for open weights (Qwen, Llama, Mistral) with private context.', 'AI Systems Lab')">
+              Ollama
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('LM Studio', 'Benchmarking context windows, tokens/sec performance, and system prompt tuning.', 'AI Systems Lab')">
+              LM Studio
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Python', 'Telemetry ingestion scripts, model API proxies, and asynchronous processing scripts.', 'HoneyChain IoT &amp; AI Lab')">
+              Python
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-transparent border border-dashed border-text-muted text-text-primary hover:border-sensor-amber transition-all" onclick="inspectSkillEvidence('LangChain', 'Currently learning: Multi-step agent flows, vector store retrieval, and memory buffers.', 'Exploration Pipeline')">
+              LangChain
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-transparent border border-dashed border-text-muted text-text-primary hover:border-sensor-amber transition-all" onclick="inspectSkillEvidence('Hugging Face', 'Currently learning: Quantization formats (GGUF, AWQ), tokenizer mechanics, and fine-tune sets.', 'Exploration Pipeline')">
+              Hugging Face
+            </button>
+</div>
+</div>
+</div>
+<!-- Domain 3: Systems & Infra -->
+<div class="bg-white rounded-xl p-5 border border-border-subtle shadow-xs flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-border-subtle/80">
+<h3 class="font-display font-semibold text-base text-text-primary">Systems &amp; Infra</h3>
+<span class="material-symbols-outlined text-text-muted text-[18px]">dns</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Linux', 'Primary development driver. Process monitoring, systemd units, network namespace debugging.', 'Kernel Log &amp; Server Infra')">
+              Linux
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Docker', 'Reproducible environments, multi-stage compilation, and microservice testing.', 'SLDungeons &amp; Services')">
+              Docker
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Git', 'Clean trunk-based development, atomic commits, branch protection workflows.', 'All Repositories')">
+              Git
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Bash', 'Automation pipelines, backup cron jobs, and environment setup scripts.', 'Linux Infra')">
+              Bash
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-transparent border border-dashed border-text-muted text-text-primary hover:border-sensor-amber transition-all" onclick="inspectSkillEvidence('Podman', 'Currently learning: Rootless container sandboxing and daemonless isolation policies.', 'Exploration Pipeline')">
+              Podman
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-transparent border border-dashed border-text-muted text-text-primary hover:border-sensor-amber transition-all" onclick="inspectSkillEvidence('Nginx', 'Currently learning: Reverse proxy routing, SSL termination, and static header hardening.', 'Exploration Pipeline')">
+              Nginx
+            </button>
+</div>
+</div>
+</div>
+<!-- Domain 4: Security -->
+<div class="bg-white rounded-xl p-5 border border-border-subtle shadow-xs flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-border-subtle/80">
+<h3 class="font-display font-semibold text-base text-text-primary">Security</h3>
+<span class="material-symbols-outlined text-text-muted text-[18px]">security</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Network Analysis', 'Packet inspection, local port scans, and network socket communication fundamentals.', 'Security Labs')">
+              Network Analysis
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-surface-dark text-white hover:bg-black transition-all" onclick="inspectSkillEvidence('Wireshark', 'Analyzing TCP handshakes, TLS negotiation, and unencrypted local traffic.', 'Security Labs')">
+              Wireshark
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-transparent border border-dashed border-text-muted text-text-primary hover:border-sensor-amber transition-all" onclick="inspectSkillEvidence('OWASP Top 10', 'Currently learning: Hands-on analysis of SSRF, injection vectors, and broken access controls.', 'Learning Path')">
+              OWASP Top 10
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-transparent border border-dashed border-text-muted text-text-primary hover:border-sensor-amber transition-all" onclick="inspectSkillEvidence('System Hardening', 'Currently learning: SSH key access policies, disabling root logins, and firewall configuration.', 'Learning Path')">
+              System Hardening
+            </button>
+<button class="skill-chip px-3 py-1.5 rounded text-xs font-mono font-medium bg-transparent border border-dashed border-text-muted text-text-primary hover:border-sensor-amber transition-all" onclick="inspectSkillEvidence('Cryptography Basics', 'Currently learning: Ed25519 signatures, AES-GCM encryption, and HMAC authentication.', 'Learning Path')">
+              Cryptography basics
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Evidence Inspector Card -->
+<div class="mt-6 p-5 rounded-xl bg-white border border-border-subtle flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all" id="skill-evidence-card">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-sensor-amber text-[22px] mt-0.5">verified</span>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-mono text-xs font-bold text-text-primary uppercase tracking-wider" id="evidence-tech">NEXT.JS</span>
+<span class="px-2 py-0.5 rounded bg-surface-light border border-border-subtle font-mono text-[10px] text-text-muted" id="evidence-project">CROSS-REF: Kernel Log &amp; Web Specs</span>
+</div>
+<p class="text-xs md:text-sm text-text-muted max-w-2xl leading-relaxed" id="evidence-desc">
+            Core framework for Kernel Log and this portfolio. Used for fast SSR, static generation, and strict TypeScript integration.
+          </p>
+</div>
+</div>
+<div class="shrink-0">
+<span class="font-mono text-[11px] text-sensor-amber font-semibold block">Evidence-Based Profile</span>
+<span class="font-mono text-[10px] text-text-muted">Zero inflated rating bars • 100% verified code</span>
+</div>
+</div>
+</section>
+<!-- ================= 4. BEYOND THE INTERFACE & CURRENTLY EXPLORING ================= -->
+<!-- PART A: BEYOND THE INTERFACE (Story & Timeline) -->
+<section class="py-24 px-6 md:px-12 lg:px-16 max-w-[1440px] mx-auto border-b border-border-subtle" id="about">
+<div class="grid grid-cols-12 gap-8 lg:gap-16 items-start">
+<!-- Left Column: Philosophy & Monogram Insignia -->
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<div>
+<span class="font-mono text-xs text-text-muted uppercase tracking-wider block mb-2">04 // Editorial Story</span>
+<h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
+            Beyond the Interface<span class="text-sensor-amber">.</span>
+</h2>
+</div>
+<div class="space-y-4 text-sm md:text-base text-text-muted leading-relaxed">
+<p class="">
+            I am a software builder drawn to systems that require both architectural clarity and intuitive user interaction. Rather than confining myself to one layer of the stack, I find genuine satisfaction in connecting raw operating system primitives with thoughtful digital products.
+          </p>
+<p class="">
+            Whether running local AI models on personal hardware, writing technical post-mortems for Kernel Log, or designing high-precision interfaces, I believe in practical, iterative prototyping that tests real-world assumptions.
+          </p>
+</div>
+<!-- Stylized Monochrome Monogram Insignia Card -->
+<div class="bg-white rounded-xl p-5 border border-border-subtle shadow-xs flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-dark flex items-center justify-center text-white font-display text-2xl font-bold shadow-inner flex-shrink-0">
+            SH
+          </div>
+<div>
+<h4 class="font-display font-semibold text-text-primary text-base">Sushovan Halder</h4>
+<p class="font-mono text-xs text-text-muted mt-0.5">Undergraduate Developer &amp; Systems Enthusiast</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="text-[11px] font-mono text-text-primary">Building open, verifiable prototypes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Vertical Chronological Timeline -->
+<div class="col-span-12 lg:col-span-7 lg:pl-4">
+<div class="flex items-center justify-between pb-3 mb-6 border-b border-border-subtle">
+<span class="font-mono text-xs uppercase tracking-wider text-text-muted font-semibold">Timeline &amp; Milestones</span>
+<span class="font-mono text-xs text-text-muted">Chronological Order</span>
+</div>
+<div class="relative pl-6 space-y-7 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[1px] before:bg-border-subtle">
+<!-- Timeline Item 1: Active Now (Amber Pulse Beacon) -->
+<div class="relative">
+<span class="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-sensor-amber ring-4 ring-[#F3F2EF]"></span>
+<div class="bg-white p-4.5 rounded-xl border border-border-subtle shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono text-xs font-semibold text-sensor-amber">Now</span>
+<span class="px-2 py-0.5 rounded bg-amber-soft text-sensor-amber font-mono text-[10px] font-medium border border-sensor-amber/30">Active Focus</span>
+</div>
+<p class="font-display font-semibold text-sm md:text-base text-text-primary">
+                Exploring AI systems, security posture, and Linux infrastructure
+              </p>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+                Investigating local inference pipelines, container security boundaries, and systems-level development workflows.
+              </p>
+</div>
+</div>
+<!-- Timeline Item 2: Kernel Log -->
+<div class="relative">
+<span class="absolute -left-[27px] top-2.5 w-2 h-2 rounded-full bg-text-muted ring-4 ring-[#F3F2EF]"></span>
+<div class="p-4 rounded-xl bg-white/70 hover:bg-white border border-border-subtle transition-all">
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono text-xs text-text-muted">[Year]</span>
+<span class="font-mono text-[10px] text-text-muted uppercase">Publication</span>
+</div>
+<p class="font-display font-semibold text-sm text-text-primary">Kernel Log Launched</p>
+<p class="text-xs text-text-muted mt-1">
+                Started an independent engineering blog to document technical breakthroughs, systems learnings, and build notes.
+              </p>
+</div>
+</div>
+<!-- Timeline Item 3: HoneyChain Hackathon -->
+<div class="relative">
+<span class="absolute -left-[27px] top-2.5 w-2 h-2 rounded-full bg-text-muted ring-4 ring-[#F3F2EF]"></span>
+<div class="p-4 rounded-xl bg-white/70 hover:bg-white border border-border-subtle transition-all">
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono text-xs text-text-muted">[Year]</span>
+<span class="font-mono text-[10px] text-text-muted uppercase">Hackathon Project</span>
+</div>
+<p class="font-display font-semibold text-sm text-text-primary">HoneyChain — OriginHive</p>
+<p class="text-xs text-text-muted mt-1">
+                Created a blockchain-based honey traceability and smart beekeeping concept during a fast-paced collaborative hackathon.
+              </p>
+</div>
+</div>
+<!-- Timeline Item 4: First Web Projects -->
+<div class="relative">
+<span class="absolute -left-[27px] top-2.5 w-2 h-2 rounded-full bg-text-muted ring-4 ring-[#F3F2EF]"></span>
+<div class="p-4 rounded-xl bg-white/70 hover:bg-white border border-border-subtle transition-all">
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono text-xs text-text-muted">[Year]</span>
+<span class="font-mono text-[10px] text-text-muted uppercase">Foundations</span>
+</div>
+<p class="font-display font-semibold text-sm text-text-primary">First Web Projects</p>
+<p class="text-xs text-text-muted mt-1">
+                Early exploration into full-stack architectures, responsive design systems, and client-side web interfaces.
+              </p>
+</div>
+</div>
+<!-- Timeline Item 5: Education -->
+<div class="relative">
+<span class="absolute -left-[27px] top-2.5 w-2 h-2 rounded-full bg-text-muted ring-4 ring-[#F3F2EF]"></span>
+<div class="p-4 rounded-xl bg-white/70 hover:bg-white border border-border-subtle transition-all">
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono text-xs text-text-muted">[Start year – Expected year]</span>
+<span class="font-mono text-[10px] text-text-muted uppercase">Education</span>
+</div>
+<p class="font-display font-semibold text-sm text-text-primary">B.Tech in [Branch]</p>
+<p class="text-xs text-text-muted mt-1">[University]</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PART B: CURRENTLY EXPLORING (Active Research Laboratories) -->
+<section class="py-24 px-6 md:px-12 lg:px-16 max-w-[1440px] mx-auto border-b border-border-subtle" id="exploring">
+<!-- Header -->
+<div class="mb-12">
+<span class="font-mono text-xs text-text-muted uppercase tracking-wider block mb-2">05 // Active Research Laboratories</span>
+<h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-text-primary">
+        Currently Exploring<span class="text-sensor-amber">.</span>
+</h2>
+<p class="text-sm md:text-base text-text-muted mt-2 max-w-xl">
+        Active technical domains where I run experiments, construct prototypes, and strengthen low-level principles. Hover or click to reveal research questions.
+      </p>
+</div>
+<!-- 4 Sleek Interactive Laboratory Modules -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Module 1: AI Systems -->
+<div class="lab-module group bg-white rounded-xl p-6 border border-border-subtle flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:border-sensor-amber hover:-translate-y-1 cursor-pointer">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="material-symbols-outlined text-surface-dark group-hover:text-sensor-amber text-2xl transition-colors">neurology</span>
+<span class="px-2.5 py-1 rounded text-[10px] font-mono font-medium bg-amber-soft text-sensor-amber border border-sensor-amber/30">
+              Building
+            </span>
+</div>
+<h3 class="font-display font-bold text-lg text-text-primary mb-2">AI Systems</h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">
+            Running local LLMs with Ollama and integrating agentic workflows directly into workstation tooling.
+          </p>
+<!-- Revealable Research Inquiry -->
+<div class="p-3 bg-surface-light rounded-lg border border-border-subtle/80 text-[11px] font-mono text-text-primary">
+<span class="text-[9px] uppercase tracking-wider text-text-muted block mb-1">Core Research Question</span>
+            "Can local 7B-14B models reliably handle code linting and AST refactoring without cloud round-trips?"
+          </div>
+</div>
+<div class="pt-4 mt-4 border-t border-border-subtle/60 flex items-center justify-between text-xs font-mono text-text-muted">
+<span class="">Local Models</span>
+<span class="text-sensor-amber font-medium">Active</span>
+</div>
+</div>
+<!-- Module 2: Security Research -->
+<div class="lab-module group bg-white rounded-xl p-6 border border-border-subtle flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:border-sensor-amber hover:-translate-y-1 cursor-pointer">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="material-symbols-outlined text-surface-dark group-hover:text-sensor-amber text-2xl transition-colors">shield</span>
+<span class="px-2.5 py-1 rounded text-[10px] font-mono font-medium bg-neutral-100 text-text-muted border border-border-subtle">
+              Exploring
+            </span>
+</div>
+<h3 class="font-display font-bold text-lg text-text-primary mb-2">Security Research</h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">
+            Hands-on threat modeling, web application vulnerabilities, and network defense-in-depth strategies.
+          </p>
+<div class="p-3 bg-surface-light rounded-lg border border-border-subtle/80 text-[11px] font-mono text-text-primary">
+<span class="text-[9px] uppercase tracking-wider text-text-muted block mb-1">Core Research Question</span>
+            "Where do traditional web security boundaries break down when microservices communicate across sidecars?"
+          </div>
+</div>
+<div class="pt-4 mt-4 border-t border-border-subtle/60 flex items-center justify-between text-xs font-mono text-text-muted">
+<span class="">Hardening</span>
+<span class="text-text-primary font-medium">Research</span>
+</div>
+</div>
+<!-- Module 3: Full-Stack Architecture -->
+<div class="lab-module group bg-white rounded-xl p-6 border border-border-subtle flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:border-sensor-amber hover:-translate-y-1 cursor-pointer">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="material-symbols-outlined text-surface-dark group-hover:text-sensor-amber text-2xl transition-colors">code_blocks</span>
+<span class="px-2.5 py-1 rounded text-[10px] font-mono font-medium bg-amber-soft text-sensor-amber border border-sensor-amber/30">
+              Building
+            </span>
+</div>
+<h3 class="font-display font-bold text-lg text-text-primary mb-2">Full-Stack Architecture</h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">
+            High-performance reactive frontends paired with resilient backend services and edge runtimes.
+          </p>
+<div class="p-3 bg-surface-light rounded-lg border border-border-subtle/80 text-[11px] font-mono text-text-primary">
+<span class="text-[9px] uppercase tracking-wider text-text-muted block mb-1">Core Research Question</span>
+            "How can zero-runtime CSS patterns and partial hydration maximize real-world rendering throughput?"
+          </div>
+</div>
+<div class="pt-4 mt-4 border-t border-border-subtle/60 flex items-center justify-between text-xs font-mono text-text-muted">
+<span class="">Web Apps</span>
+<span class="text-sensor-amber font-medium">Active</span>
+</div>
+</div>
+<!-- Module 4: Linux Infrastructure -->
+<div class="lab-module group bg-white rounded-xl p-6 border border-border-subtle flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:border-sensor-amber hover:-translate-y-1 cursor-pointer">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="material-symbols-outlined text-surface-dark group-hover:text-sensor-amber text-2xl transition-colors">terminal</span>
+<span class="px-2.5 py-1 rounded text-[10px] font-mono font-medium bg-neutral-100 text-text-muted border border-border-subtle">
+              Exploring
+            </span>
+</div>
+<h3 class="font-display font-bold text-lg text-text-primary mb-2">Linux Infrastructure</h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">
+            Containerization with Podman &amp; Docker, self-hosted environments, and kernel/OS fundamentals.
+          </p>
+<div class="p-3 bg-surface-light rounded-lg border border-border-subtle/80 text-[11px] font-mono text-text-primary">
+<span class="text-[9px] uppercase tracking-wider text-text-muted block mb-1">Core Research Question</span>
+            "What minimal unprivileged namespace isolation profile is required for safe untrusted user code execution?"
+          </div>
+</div>
+<div class="pt-4 mt-4 border-t border-border-subtle/60 flex items-center justify-between text-xs font-mono text-text-muted">
+<span class="">Containers</span>
+<span class="text-text-primary font-medium">Research</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 5. CONTACT & OBSIDIAN FOOTER ================= -->
+<footer class="w-full bg-surface-dark text-white pt-24 pb-12 border-t border-dark-border" id="contact">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
+<div class="grid grid-cols-12 gap-12 lg:gap-16 pb-20 border-b border-dark-border">
+<!-- Left: Headline, Subtitle & Action Links -->
+<div class="col-span-12 lg:col-span-7 flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-2 mb-3 font-mono text-xs text-text-muted uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-sensor-amber"></span>
+<span class="">06 // Get in Touch</span>
+</div>
+<h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+              Have something interesting in mind<span class="text-sensor-amber">?</span>
+</h2>
+<p class="text-base sm:text-lg text-zinc-400 max-w-xl leading-relaxed mb-10">
+              I am always eager to talk systems architecture, open-source experiments, AI tooling, and collaborative technical builds.
+            </p>
+<!-- Quick-Connect Action Badges -->
+<div class="flex flex-wrap items-center gap-3">
+<a class="px-5 py-3 rounded-lg border border-dark-border bg-dark-elevated text-zinc-200 text-xs font-mono font-medium hover:border-sensor-amber hover:text-white transition-all duration-150 flex items-center gap-2" href="mailto:contact@sushovan.dev">
+<span class="material-symbols-outlined text-[16px] text-sensor-amber">mail</span>
+<span class="">Email</span>
+</a>
+<a class="px-5 py-3 rounded-lg border border-dark-border bg-dark-elevated text-zinc-200 text-xs font-mono font-medium hover:border-sensor-amber hover:text-white transition-all duration-150 flex items-center gap-2" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-zinc-400">code</span>
+<span class="">GitHub</span>
+</a>
+<a class="px-5 py-3 rounded-lg border border-dark-border bg-dark-elevated text-zinc-200 text-xs font-mono font-medium hover:border-sensor-amber hover:text-white transition-all duration-150 flex items-center gap-2" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-zinc-400">share</span>
+<span class="">LinkedIn</span>
+</a>
+<a class="px-5 py-3 rounded-lg border border-dark-border bg-dark-elevated text-zinc-200 text-xs font-mono font-medium hover:border-sensor-amber hover:text-white transition-all duration-150 flex items-center gap-2" href="#hero">
+<span class="material-symbols-outlined text-[16px] text-zinc-400">description</span>
+<span class="">Résumé</span>
+</a>
+</div>
+</div>
+<div class="pt-10 mt-8 hidden lg:block">
+<span class="font-mono text-xs text-text-muted">Available for engineering roles, remote collaborations, and systems work.</span>
+</div>
+</div>
+<!-- Right: Minimalist Obsidian Contact Form with Amber Focus Glow -->
+<div class="col-span-12 lg:col-span-5 bg-dark-elevated p-8 rounded-2xl border border-dark-border shadow-2xl">
+<h3 class="font-display font-semibold text-xl text-white mb-1.5">Send a direct message</h3>
+<p class="text-xs text-zinc-400 mb-6">Drop a note directly to my inbox.</p>
+<form class="space-y-4" id="contact-form" onsubmit="handleFormSubmit(event)">
+<div>
+<label class="block font-mono text-[11px] text-zinc-400 uppercase tracking-wider mb-1.5" for="contact-name">Name</label>
+<input class="w-full bg-[#111317] border border-dark-border rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-sensor-amber focus:ring-1 focus:ring-sensor-amber transition-colors" id="contact-name" placeholder="Your name or team" required="" type="text">
+</div>
+<div>
+<label class="block font-mono text-[11px] text-zinc-400 uppercase tracking-wider mb-1.5" for="contact-email">Email</label>
+<input class="w-full bg-[#111317] border border-dark-border rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-sensor-amber focus:ring-1 focus:ring-sensor-amber transition-colors" id="contact-email" placeholder="name@example.com" required="" type="email">
+</div>
+<div>
+<label class="block font-mono text-[11px] text-zinc-400 uppercase tracking-wider mb-1.5" for="contact-message">Message</label>
+<textarea class="w-full bg-[#111317] border border-dark-border rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-sensor-amber focus:ring-1 focus:ring-sensor-amber transition-colors resize-none" id="contact-message" placeholder="What are you building or looking to explore?" required="" rows="4"></textarea>
+</div>
+<button class="w-full py-3 px-4 bg-sensor-amber text-white font-mono text-xs font-semibold uppercase tracking-wider rounded-lg hover:bg-[#e86b32] transition-colors shadow-sm flex items-center justify-center gap-2" id="submit-btn" type="submit">
+<span class="">Transmit Message</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Clean Bottom Footer Bar -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+<div>
+<span class="">© Sushovan Halder. Designed &amp; engineered with precision.</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="inline-flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors" href="#hero">
+<span class="">Return to top</span>
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- ================= CLIENT SCRIPTS ================= -->
+<script>
+    // Hero Project Data Library
+    const heroSpecs = {
+      kernel: {
+        title: "Kernel Log",
+        cat: "PUBLISHING SPEC",
+        tag: "01 // BESPOKE",
+        desc: "Personal engineering publication exploring low-level architecture, Linux container boundaries, and practical web tooling.",
+        chips: ["Next.js", "Markdown", "Linux"],
+        telemetry: "KERNEL // VFS &amp; CGROUPS"
+      },
+      honeychain: {
+        title: "HoneyChain — OriginHive",
+        cat: "SUPPLY SPEC",
+        tag: "02 // HACKATHON",
+        desc: "IoT-assisted tamper-proof traceability protocol verifying organic honey harvest batches and smart beekeeping.",
+        chips: ["Solidity", "React", "IoT Telemetry"],
+        telemetry: "LEDGER // SMART HIVE"
+      },
+      sldungeons: {
+        title: "SLDungeons",
+        cat: "PLUGIN SPEC",
+        tag: "03 // ENGINE",
+        desc: "Solo Leveling dungeon gate mechanics engine with isolated ephemeral instances and asynchronous chunk generation.",
+        chips: ["Java 21", "Spigot API", "Async NBT"],
+        telemetry: "RUNTIME // JVM INSTANCES"
+      },
+      market: {
+        title: "Market Dashboard",
+        cat: "TELEMETRY SPEC",
+        tag: "04 // CLIENT",
+        desc: "High-precision financial charting web prototype with offscreen canvas rendering and real-time order-book telemetry.",
+        chips: ["React", "WebSockets", "Canvas"],
+        telemetry: "FEED // ORDER DEPTH"
+      }
+    };
+
+    function switchHeroFocus(key, buttonElement) {
+      const spec = heroSpecs[key];
+      if (!spec) return;
+
+      // Update Preview Card in Hero Column 3
+      document.getElementById('hero-preview-title').textContent = spec.title;
+      document.getElementById('hero-preview-cat').textContent = spec.cat;
+      document.getElementById('hero-preview-tag').textContent = spec.tag;
+      document.getElementById('hero-preview-desc').textContent = spec.desc;
+      document.getElementById('telemetry-node').innerHTML = spec.telemetry;
+
+      const chipsBox = document.getElementById('hero-preview-chips');
+      chipsBox.innerHTML = spec.chips.map(c => 
+        `<span class="px-2 py-0.5 rounded bg-surface-light border border-border-subtle font-mono text-[10px]">${c}</span>`
+      ).join('');
+
+      // Update button visual styles
+      document.querySelectorAll('.hero-project-btn').forEach(btn => {
+        btn.classList.remove('bg-white', 'shadow-2xs', 'border-l-sensor-amber');
+        btn.classList.add('border-l-transparent', 'hover:bg-white/70');
+        const iconOrSpan = btn.querySelector('.material-symbols-outlined, span.font-mono');
+        if (iconOrSpan && iconOrSpan.classList.contains('material-symbols-outlined')) {
+          iconOrSpan.outerHTML = '<span class="font-mono text-[10px] text-text-muted uppercase">View</span>';
+        }
+      });
+
+      buttonElement.classList.add('bg-white', 'shadow-2xs', 'border-l-sensor-amber');
+      buttonElement.classList.remove('border-l-transparent', 'hover:bg-white/70');
+      const viewTag = buttonElement.querySelector('span.uppercase');
+      if (viewTag) {
+        viewTag.outerHTML = '<span class="material-symbols-outlined text-sensor-amber text-[18px]">arrow_forward</span>';
+      }
+    }
+
+    // Cybernetic Focus System Trigger
+    function triggerHudFocus(type) {
+      const map = {
+        ai: 'kernel',
+        web: 'market',
+        sec: 'kernel',
+        sys: 'sldungeons'
+      };
+      const targetKey = map[type] || 'kernel';
+      
+      // Update telemetry
+      const telBadge = document.getElementById('telemetry-status');
+      telBadge.innerHTML = '● FOCUSED: ' + type.toUpperCase();
+      setTimeout(() => {
+        telBadge.innerHTML = '● VERIFIED ONLINE';
+      }, 2500);
+
+      // Find button in hero rail
+      const buttons = document.querySelectorAll('.hero-project-btn');
+      if (type === 'ai') switchHeroFocus('kernel', buttons[0]);
+      else if (type === 'web') switchHeroFocus('market', buttons[3]);
+      else if (type === 'sec') switchHeroFocus('honeychain', buttons[1]);
+      else if (type === 'sys') switchHeroFocus('sldungeons', buttons[2]);
+    }
+
+    // Selected Experiments Tab Switcher
+    function switchExperiment(tabKey, tabButton) {
+      document.querySelectorAll('.exp-tab-btn').forEach(b => {
+        b.classList.remove('text-white', 'bg-surface-dark');
+        b.classList.add('text-text-muted', 'hover:text-text-primary', 'hover:bg-neutral-100');
+      });
+
+      tabButton.classList.add('text-white', 'bg-surface-dark');
+      tabButton.classList.remove('text-text-muted', 'hover:text-text-primary', 'hover:bg-neutral-100');
+
+      document.querySelectorAll('.exp-panel').forEach(p => p.classList.add('hidden'));
+      const activePanel = document.getElementById('panel-' + tabKey);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+      }
+    }
+
+    // Capability Map Inspector & Cross-Reference Linker
+    function inspectSkillEvidence(name, description, projectRef) {
+      document.getElementById('evidence-tech').textContent = name;
+      document.getElementById('evidence-desc').textContent = description;
+      document.getElementById('evidence-project').textContent = 'CROSS-REF: ' + projectRef;
+
+      const card = document.getElementById('skill-evidence-card');
+      card.classList.remove('border-border-subtle');
+      card.classList.add('border-sensor-amber', 'shadow-md');
+      setTimeout(() => {
+        card.classList.remove('border-sensor-amber', 'shadow-md');
+        card.classList.add('border-border-subtle');
+      }, 1500);
+    }
+
+    // Contact Form Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.innerHTML = '<span>Message Transmitted</span><span class="material-symbols-outlined text-[16px]">check</span>';
+      btn.classList.add('bg-emerald-600');
+      setTimeout(() => {
+        alert('Thank you Sushovan Halder will receive your dispatch shortly.');
+        document.getElementById('contact-form').reset();
+        btn.innerHTML = '<span>Transmit Message</span><span class="material-symbols-outlined text-[16px]">send</span>';
+        btn.classList.remove('bg-emerald-600');
+      }, 800);
+    }
+
+    // Gentle Parallax for Cybernetic Bust
+    window.addEventListener('mousemove', (e) => {
+      const bust = document.getElementById('cyber-bust');
+      if (!bust) return;
+      const x = (e.clientX / window.innerWidth - 0.5) * 12;
+      const y = (e.clientY / window.innerHeight - 0.5) * 8;
+      bust.style.transform = `translate3d(${x * 0.5}px, ${y * 0.5}px, 0)`;
+    });
+  </script>
+
+
+</body></html>

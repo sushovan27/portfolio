@@ -1,0 +1,322 @@
+[
+  {
+    "id": "programming-languages",
+    "name": "Programming Languages",
+    "category": "Core Foundations",
+    "description": "Core languages used for algorithmic problem solving, low-level systems programming, utilities, and full-stack web applications.",
+    "status": "active-practice",
+    "skills": [
+      {
+        "name": "C",
+        "description": "Programming fundamentals, low-level concepts, and problem solving"
+      },
+      {
+        "name": "C++",
+        "description": "Programming, algorithms, object-oriented development, and CLI tooling"
+      },
+      {
+        "name": "Python",
+        "description": "Scripting, automation, utilities, and application development"
+      },
+      {
+        "name": "JavaScript",
+        "description": "Interactive web applications and frontend development"
+      },
+      {
+        "name": "TypeScript",
+        "description": "Typed JavaScript for structured application development"
+      },
+      {
+        "name": "Bash",
+        "description": "Linux shell scripting, automation, and command-line workflows"
+      },
+      {
+        "name": "HTML",
+        "description": "Semantic markup and document structure for the web"
+      },
+      {
+        "name": "CSS",
+        "description": "Responsive styling, layout systems, and modern interface design"
+      }
+    ],
+    "technologies": [
+      "C",
+      "C++",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Bash",
+      "HTML",
+      "CSS"
+    ],
+    "projectSlugs": [
+      "cli-expression-calculator",
+      "personal-assistant",
+      "hivetrace",
+      "stegdetector",
+      "e2ee-messaging",
+      "jyotirveda-gurukulam",
+      "urbangrowth-agency",
+      "horizons-travel",
+      "saffron-culinary-canvas"
+    ],
+    "notes": "Focused on practical usage, algorithms, and verifiable code without exaggerated claims."
+  },
+  {
+    "id": "web-development",
+    "name": "Web Development",
+    "category": "Frontend & Full-Stack",
+    "description": "Architecting responsive user interfaces, modular components, and full-stack web platforms with modern web tooling.",
+    "status": "building",
+    "skills": [
+      {
+        "name": "HTML",
+        "description": "Semantic structure and accessible document markup"
+      },
+      {
+        "name": "CSS",
+        "description": "Modern responsive layouts, Flexbox, Grid, and Tailwind design tokens"
+      },
+      {
+        "name": "React",
+        "description": "Component architecture, reactive state management, and UI rendering"
+      },
+      {
+        "name": "Next.js",
+        "description": "App router architecture, server/client components, and production builds"
+      },
+      {
+        "name": "Vite",
+        "description": "Fast frontend build tooling and development environment"
+      },
+      {
+        "name": "Node.js",
+        "description": "Runtime environment for build tooling and developer utilities"
+      },
+      {
+        "name": "API Integration",
+        "description": "Consuming REST APIs, managing asynchronous state, and data serialization"
+      }
+    ],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "React",
+      "Next.js",
+      "Vite",
+      "Node.js",
+      "API Integration",
+      "Tailwind CSS"
+    ],
+    "projectSlugs": [
+      "hivetrace",
+      "jyotirveda-gurukulam",
+      "urbangrowth-agency",
+      "horizons-travel",
+      "saffron-culinary-canvas"
+    ],
+    "notes": "Verified through production-deployed web applications with responsive layouts and active domains."
+  },
+  {
+    "id": "systems-tooling",
+    "name": "Systems & Developer Tooling",
+    "category": "Systems & Environments",
+    "description": "Comfortable working with Linux environments, terminal workflows, containerized runtimes, and developer tooling.",
+    "status": "active-practice",
+    "skills": [
+      {
+        "name": "Linux",
+        "description": "Command-line environments, system configuration, and process management"
+      },
+      {
+        "name": "Git",
+        "description": "Version control, commit hygiene, branching workflows, and collaboration"
+      },
+      {
+        "name": "GitHub",
+        "description": "Repositories, collaboration, source hosting, and documentation"
+      },
+      {
+        "name": "Docker",
+        "description": "Container-based environments for isolated development and testing"
+      },
+      {
+        "name": "Podman",
+        "description": "Rootless container tooling and Linux development workflows"
+      },
+      {
+        "name": "CLI Tooling",
+        "description": "Building and using terminal-based utilities and developer tools"
+      },
+      {
+        "name": "SQLite",
+        "description": "Embedded relational database storage for local applications"
+      },
+      {
+        "name": "JSON & Configuration",
+        "description": "Structured data interchange, system configuration, and schema modeling"
+      },
+      {
+        "name": "Networking Fundamentals",
+        "description": "Understanding protocols, sockets, and network debugging"
+      },
+      {
+        "name": "System Troubleshooting",
+        "description": "Diagnosing configuration issues, process inspection, and environment debugging"
+      }
+    ],
+    "technologies": [
+      "Linux",
+      "Git",
+      "GitHub",
+      "Docker",
+      "Podman",
+      "CLI Tooling",
+      "SQLite",
+      "JSON & Configuration",
+      "Networking Fundamentals",
+      "System Troubleshooting"
+    ],
+    "projectSlugs": [
+      "cli-expression-calculator",
+      "personal-assistant",
+      "e2ee-messaging",
+      "bank-management-system"
+    ],
+    "notes": "Demonstrated through command-line utilities, container workflows, and Linux system usage."
+  },
+  {
+    "id": "ai-agentic-development",
+    "name": "AI & Agentic Development",
+    "category": "Agentic Engineering",
+    "description": "Designing multi-step AI workflows, coordinating agent tools and context, and experimenting with local inference engines.",
+    "status": "exploring-and-building",
+    "skills": [
+      {
+        "name": "AI Coding Agents",
+        "description": "Using coding agents to explore repositories, implement features, debug software, and automate development workflows"
+      },
+      {
+        "name": "Agentic Workflow Design",
+        "description": "Designing multi-step AI workflows that coordinate tools, context, and execution"
+      },
+      {
+        "name": "Workflow Automation",
+        "description": "Automating repetitive development and technical tasks with scripts, AI agents, and tool integrations"
+      },
+      {
+        "name": "Local LLM Experimentation",
+        "description": "Running and evaluating local open-weight language models for specialized tasks"
+      },
+      {
+        "name": "Prompt & Context Engineering",
+        "description": "Structuring instructions, constraints, and repository context for agent execution"
+      },
+      {
+        "name": "Tool Integration",
+        "description": "Connecting external tools, APIs, and command runners to agentic pipelines"
+      },
+      {
+        "name": "OpenCode",
+        "description": "Agent-assisted development and interactive coding sessions"
+      },
+      {
+        "name": "Claude Code",
+        "description": "Command-line agentic workflows for software engineering and codebase navigation"
+      },
+      {
+        "name": "Codex",
+        "description": "AI-assisted code generation and execution environments"
+      },
+      {
+        "name": "Ollama",
+        "description": "Local model runtime and integration for offline inference"
+      },
+      {
+        "name": "LM Studio",
+        "description": "Local model testing, quantization experimentation, and inference"
+      },
+      {
+        "name": "Open WebUI",
+        "description": "Self-hosted interface for local and API-driven language model interactions"
+      },
+      {
+        "name": "OpenRouter",
+        "description": "Unified API gateway for routing and experimenting across model architectures"
+      }
+    ],
+    "technologies": [
+      "AI Coding Agents",
+      "Agentic Workflow Design",
+      "OpenCode",
+      "Claude Code",
+      "Codex",
+      "Ollama",
+      "LM Studio",
+      "Open WebUI",
+      "OpenRouter",
+      "Workflow Automation"
+    ],
+    "projectSlugs": [
+      "stegdetector",
+      "personal-assistant"
+    ],
+    "notes": "Hands-on workflow automation and agent-driven engineering using command-line agents and local LLM runtimes."
+  },
+  {
+    "id": "cybersecurity-networking",
+    "name": "Cybersecurity & Networking",
+    "category": "Systems & Security Learning",
+    "description": "Practical learning and hands-on experimentation with cryptographic primitives, packet analysis, and system defense.",
+    "status": "learning",
+    "skills": [
+      {
+        "name": "Linux Security",
+        "description": "System hardening fundamentals, permission models, and unprivileged execution"
+      },
+      {
+        "name": "Network Security Fundamentals",
+        "description": "Packet inspection, traffic analysis, and secure communication protocols"
+      },
+      {
+        "name": "Cryptographic Fundamentals",
+        "description": "Implementing and verifying primitives like X25519 and AES-256-GCM"
+      },
+      {
+        "name": "Firewalls",
+        "description": "Packet filtering rules and local network boundary defense"
+      },
+      {
+        "name": "Networking",
+        "description": "TCP/IP fundamentals, socket programming, and routing behavior"
+      },
+      {
+        "name": "OpenWrt",
+        "description": "Embedded router configuration and home network experimentation"
+      },
+      {
+        "name": "Security Tooling",
+        "description": "Working with network analysis tools such as Wireshark and terminal security utilities"
+      },
+      {
+        "name": "Ethical Hacking & CTF Learning",
+        "description": "Hands-on security exploration through controlled environments and problem-solving"
+      }
+    ],
+    "technologies": [
+      "Linux Security",
+      "Network Security Fundamentals",
+      "Cryptographic Fundamentals",
+      "Firewalls",
+      "Networking",
+      "OpenWrt",
+      "Security Tooling",
+      "Ethical Hacking & CTF Learning"
+    ],
+    "projectSlugs": [
+      "e2ee-messaging",
+      "stegdetector"
+    ],
+    "notes": "Security learning projects built with verified cryptographic foundations; no exaggerated claims."
+  }
+]

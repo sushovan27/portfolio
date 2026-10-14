@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #F3F2EF;
+  --surface-paper: #FAF9F6;
+  --surface-card: #FFFFFF;
+  --surface-container: #EFEEEB;
+  --surface-dark: #111317;
+  --surface-dark-elevated: #1A1C21;
+
+  --text-primary: #17181B;
+  --text-on-dark: #F4F3F0;
+  --text-muted: #777A80;
+  --text-on-dark-muted: #A8A9AE;
+
+  --border-subtle: #D5D6D7;
+  --border-strong: #B8B9BC;
+  --border-dark: #282B32;
+
+  --accent-amber: #FF793D;
+  --accent-amber-soft: rgba(255, 121, 61, 0.12);
+  --focus-ring: #C84D1D;
+
+  --shadow-soft: 0 18px 48px rgba(20, 22, 26, 0.08);
+  --shadow-object: 0 28px 80px rgba(15, 18, 24, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Hide scrollbar for compact mobile tab strips */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-amber);
+  color: #FFFFFF;
+}
+
+/* Subtle architectural grid pattern */
+.grid-lines-bg {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(213, 214, 215, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(213, 214, 215, 0.35) 1px, transparent 1px);
+}
+
+/* Cybernetic bust multiply blend */
+.bust-blend {
+  mix-blend-mode: multiply;
+}
+
+/* Precise animated HUD dashed lines */
+.hud-line {
+  stroke-dasharray: 4 2;
+  animation: hud-dash 20s linear infinite;
+}
+
+@keyframes hud-dash {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+/* Technical HUD brackets for high-precision cyber-editorial styling */
+.tech-bracket {
+  position: relative;
+}
+
+.tech-bracket::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid var(--accent-amber);
+  border-left: 2px solid var(--accent-amber);
+  pointer-events: none;
+}
+
+.tech-bracket::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid var(--accent-amber);
+  border-right: 2px solid var(--accent-amber);
+  pointer-events: none;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hud-line {
+    animation: none !important;
+  }
+}
