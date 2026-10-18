@@ -4,6 +4,47 @@ import { CONTACT_EMAIL, validateContactFields, type ContactFields } from "@/lib/
 export const runtime = "nodejs";
 
 const MAX_REQUEST_BYTES = 8_192;
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1_000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const MAX_RATE_LIMIT_ENTRIES = 10_000;
+
+type RateLimitEntry = { count: number; resetAt: number };
+const contactRateLimits = new Map<string, RateLimitEntry>();
+
+function getClientKey(request: Request): string {
+  // Trust the platform-provided address first. The forwarded header is a fallback
+  // for local/proxy deployments and should be overwritten by the trusted proxy.
+  const address = request.headers.get("x-real-ip")
+    || request.headers.get("x-forwarded-for")?.split(",", 1)[0]?.trim();
+  return address || "unknown";
+}
+
+function checkRateLimit(request: Request): { allowed: boolean; retryAfter: number } {
+  const now = Date.now();
+  const key = getClientKey(request);
+  const current = contactRateLimits.get(key);
+
+  if (!current || current.resetAt <= now) {
+    if (contactRateLimits.size >= MAX_RATE_LIMIT_ENTRIES) {
+      for (const [entryKey, entry] of contactRateLimits) {
+        if (entry.resetAt <= now) contactRateLimits.delete(entryKey);
+      }
+      if (contactRateLimits.size >= MAX_RATE_LIMIT_ENTRIES) {
+        const oldestKey = contactRateLimits.keys().next().value;
+        if (oldestKey) contactRateLimits.delete(oldestKey);
+      }
+    }
+    contactRateLimits.set(key, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return { allowed: true, retryAfter: 0 };
+  }
+
+  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return { allowed: false, retryAfter: Math.max(1, Math.ceil((current.resetAt - now) / 1_000)) };
+  }
+
+  current.count += 1;
+  return { allowed: true, retryAfter: 0 };
+}
 
 function escapeHtml(value: string): string {
   return value.replace(/[&<>"']/g, (character) => ({
@@ -37,6 +78,14 @@ async function readResendId(response: Response): Promise<string | null> {
 }
 
 export async function POST(request: Request) {
+  const rateLimit = checkRateLimit(request);
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many contact requests. Please wait before trying again." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfter) } },
+    );
+  }
+
   const contentType = request.headers.get("content-type") || "";
   if (!contentType.toLowerCase().includes("application/json")) {
     return NextResponse.json({ error: "Send the form using the contact page." }, { status: 415 });

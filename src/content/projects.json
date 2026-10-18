@@ -212,5 +212,21 @@
     "telemetry": "WEB APP // CULINARY SHOWCASE",
     "specBadge": "10 // DEPLOYED PLATFORM",
     "notes": "Deployed fine dining experience website showcasing culinary offerings."
+  },
+  {
+    "slug": "the-kernel-log",
+    "name": "The Kernel Log",
+    "category": "Technical Writing / Linux & Systems",
+    "summary": "A published technical blog featuring tutorials and explainers on Linux and systems topics.",
+    "status": "deployed",
+    "technologies": [],
+    "repositoryUrl": null,
+    "liveUrl": "https://thekernellog.tech/",
+    "previewImage": null,
+    "featured": false,
+    "verified": true,
+    "telemetry": "TECHNICAL WRITING // LINUX & SYSTEMS",
+    "specBadge": "11 // PUBLISHED BLOG",
+    "notes": "No implementation stack or public source repository is listed."
   }
 ]
